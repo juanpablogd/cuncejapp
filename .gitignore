@@ -52,3 +52,4 @@ cordova.js
 cordova_plugins.js
 deviceinformation.js
 *.php
+plugins/cordova-plugin-android-permissions/www/permissions.js
