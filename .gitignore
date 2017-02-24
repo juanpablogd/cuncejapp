@@ -45,3 +45,10 @@ $RECYCLE.BIN/
 Network Trash Folder
 Temporary Items
 .apdisk
+*.project
+cordova-js-src/*
+plugins/*
+cordova.js
+cordova_plugins.js
+deviceinformation.js
+*.php

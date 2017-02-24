@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+
+  <!-- Always force latest IE rendering engine (even in intranet) & Chrome Frame 
+       Remove this if you use the .htaccess -->
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+  <title>Normatividad</title>
+  <meta name="description" content="">
+  <meta name="author" content="cbazurto">
+
+  <meta name="viewport" content="width=device-width; initial-scale=1.0">
+
+	<!-- theme -->
+	<link rel="stylesheet" href="./libs/bootstrap/css/bootstrap.min.css" >
+	<link rel="stylesheet" href="./libs/bootstrap/css/bootstrap-theme.min.css" >
+	<link rel="stylesheet" href="./css/normatividad.css" >
+	<link href="./libs/font-aw/css/font-awesome.min.css" rel="stylesheet">
+	<link rel="stylesheet" href="./libs/dialog/css/bootstrap-dialog.min.css" >
+	
+	<!-- Latest compiled and minified JavaScript -->
+	<script src="./libs/jquery.min.js"></script>
+	<script src="./libs/bootstrap/js/bootstrap.min.js"></script>
+	<script src="./libs/dialog/js/bootstrap-dialog.min.js"></script>
+
+	
+</head>
+
+<body>
+	<div class="container">
+	    <div class="row">
+	        <div class="col-sm-6 col-sm-offset-3">
+	            <div id="container_busqueda"> 
+	                <div class="input-group stylish-input-group input-append">
+	                    <input id="busqueda" type="text" class="form-control"  placeholder="Buscar Plabra Clave..." >
+	                    <span class="input-group-addon">
+	                        <button type="submit">
+	                            <span class="glyphicon glyphicon-search">&nbsp;</span>
+	                        </button>  
+	                    </span>
+	                </div>
+	                    <div class="form-group">
+						  <select class="form-control" id="sel1">
+						    <option value="" selected>Todos los tipo de norma</option>
+						  </select>
+						</div>
+	        	</div>
+			</div>
+		</div>  
+	</div>
+ 	<div class="container lista" style="overflow-y: visible">
+	
+	</div>
+	<button id="inicio" type="button" class="btn btn-default "><i class="glyphicon glyphicon-chevron-up"></i></button>
+
+</body>
+	<script src="./js/normatividad.js"></script>
+</html>
