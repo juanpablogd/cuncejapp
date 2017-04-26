@@ -39,6 +39,26 @@ var app = {
         if(devicePlatform == "iOS"){
         	StatusBar.overlaysWebView(false);
         }
+	    var networkState = navigator.connection.type;	console.log('Connection type: ' + networkState);
+	    if (networkState == Connection.NONE || networkState == Connection.UNKNOWN) { console.log("SIn Conectividad");
+			$.notify({  icon: 'glyphicon glyphicon-warning-sign',
+						message:'No hay conectividad, revise su conexión por favor'
+					 }, { 
+					type: "danger",
+					allow_dismiss: false, 
+					timer : 100,
+					delay: 3000,
+						animate: {
+							enter: 'animated zoomInDown',
+							exit: 'animated zoomOutUp'
+						},
+						placement: {
+							from: "top",
+							align: "center"
+						}
+					}
+				);
+		}
     }
 };
 app.initialize();
