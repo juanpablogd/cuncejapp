@@ -99,51 +99,49 @@
                         <div class="side-content">
                             <ul class="nav-main">
 								<!-- 0 -->
- <li>
+                                <li>
                                     <a class="active" href="menu_principal.html"><span class="sidebar-mini-hide">INICIO</span></a>
                                 </li>
-								<!-- 1 -->
                                 <li>
+                                    <a class="active" href="login.html"><span class="sidebar-mini-hide">LOGIN</span></a>
+                                </li>
+								<!-- 1 -->
+                                <li class="opciones">
                                     <a href="menu_nuestro_plan.html"><span class="sidebar-mini-hide">NUESTRO PLAN</span></a>
                                 </li>
 								<!-- 2 -->
-                                <li>
+                                <li class="opciones">
                                     <a href="menu_banco_normativo.html"><span class="sidebar-mini-hide">BANCO NORMATIVO</span></a>
                                 </li>
 								<!-- 3 -->
-                                <li>
+                                <li class="opciones">
                                     <a href="menu_asesoria_enlinea.html"><span class="sidebar-mini-hide">ASESORÍA EN LINEA</span></a>
                                 </li>
 								<!-- 4 -->
-                                <li>
+                                <li class="opciones">
                                     <a href="menu_red_departamental.html"><span class="sidebar-mini-hide">RED DEPARTAMENTAL</span></a>
                                 </li>
 								<!-- 5 -->
-                                <li>
+                                <li class="opciones">
                                     <a href="menu_nuestros_diputados.html"><span class="sidebar-mini-hide">NUESTROS DIPUTADOS</span></a>
                                 </li>
 								<!-- 6 -->
-                                <li>
+                                <li class="opciones">
                                     <a href="menu_nuestros_concejales.html"><span class="sidebar-mini-hide">CONCEJALES EN RED</span></a>
                                 </li>
 								<!-- 7 -->
-                                <li>
+                                <li class="opciones">
                                     <a href="menu_tu_opinion.html"><span class="sidebar-mini-hide">TU OPINIÓN</span></a>
                                 </li>
 								<!-- 8 -->
-                                <li>
+                                <li class="opciones">
                                     <a href="menu_comunidad.html"><span class="sidebar-mini-hide">COMUNIDAD</span></a>
                                 </li>
 								<!-- 9 -->
-                                <li>
+                                <li class="opciones">
                                     <a href="menu_formacion.html"><span class="sidebar-mini-hide">FORMACIÓN</span></a>
                                 </li> 
-								<!--
-                                <li>
-                                    <a href="menu_noticias.html"><span class="sidebar-mini-hide">24/7 NOTICIAS</span></a>
-                                </li> 
-								<!-- 11 -->
-                                <li>
+                                <li class="opciones">
                                     <a href="menu_videotic.html"><span class="sidebar-mini-hide">VIDEO TIC</span></a>
                                 </li> 
                             </ul>
@@ -214,7 +212,11 @@
         <script src="assets/js/core/jquery.placeholder.min.js"></script>
         <script src="assets/js/core/js.cookie.min.js"></script>
         <script src="assets/js/app.js"></script>
-
+        <script type="text/javascript">
+            if(localStorage.getItem("usuario") == null){
+                $(".opciones").hide();
+            }
+        </script>
 
     </body>
 </html>
