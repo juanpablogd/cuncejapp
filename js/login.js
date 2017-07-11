@@ -50,8 +50,7 @@ $(function () {
         			localStorage.setItem("usuario", JSON.stringify(data[1]));
 			  		setTimeout(function(){
 			  			window.open(
-						  'menu_principal.html',
-						  '_top' // <- This is what makes it open in a new window.
+						  'menu_principal.html'
 						); 
 					}, 50);
         		}
