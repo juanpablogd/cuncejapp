@@ -40,7 +40,7 @@ var app = {
         	StatusBar.overlaysWebView(false);
         }
 	    var networkState = navigator.connection.type;	console.log('Connection type: ' + networkState);
-	    if (networkState == Connection.NONE || networkState == Connection.UNKNOWN) { console.log("SIn Conectividad");
+	    if (networkState == Connection.NONE || networkState == Connection.UNKNOWN) {   console.log("Sin Conectividad");
 			$.notify({  icon: 'glyphicon glyphicon-warning-sign',
 						message:'No hay conectividad, revise su conexión por favor'
 					 }, { 
