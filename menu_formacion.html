@@ -187,8 +187,10 @@
                             <img src="resources/CUNSEJAPP-2-fin-19.png" style="height:36px">
                         </div>
                     </li>
-
-                </ul>                
+                </ul>
+                <button id="loadIframe" class="btn btn-default" data-toggle="layout" type="button" style="background:#d83022;float: right;">
+                    <i class="fa fa-reply" aria-hidden="true"></i>
+                </button>
             </header>
             <!-- END Header -->
 
@@ -203,7 +205,7 @@
                     
                    
 
-                               <iframe style="width: 100%;height: 1366px" src="http://www5.cundinamarca.gov.co/cuncejapp/menu_formacion.html" frameborder="0" allowfullscreen></iframe>
+                               <iframe id="miIframe" style="width: 100%;height: 1366px" src="http://www5.cundinamarca.gov.co/cuncejapp/menu_formacion.html" frameborder="0" allowfullscreen></iframe>
 
 
                                 
@@ -229,7 +231,11 @@
         <script src="assets/js/core/jquery.placeholder.min.js"></script>
         <script src="assets/js/core/js.cookie.min.js"></script>
         <script src="assets/js/app.js"></script>
-
+        <script type="text/javascript">
+            $("#loadIframe").click(function (){
+                $('#miIframe').attr('src', 'http://www5.cundinamarca.gov.co/cuncejapp/menu_formacion.html');
+            });
+        </script>>
 
     </body>
 </html>
