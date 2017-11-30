@@ -16,6 +16,35 @@
  * specific language governing permissions and limitations
  * under the License.
  */
+ function alerta(msj,callback,titulo,nomBoton){
+    if(navigator.notification == undefined){
+        alert(msj);
+        callback();
+    }else{
+        navigator.notification.alert(
+            msj,  // message
+            callback,         // callback
+            titulo,            // title
+            nomBoton                  // buttonName
+        );
+    }
+}
+
+function confirmar(msj,callback,titulo,nomBotones){
+    if(navigator.notification == undefined){
+        if (confirm(msj) == true) {
+            callback();
+        }
+    }else{
+        navigator.notification.confirm(
+            msj, // message
+            callback,            // callback to invoke with index of button pressed
+            titulo,           // title
+            ['No','Si']     // buttonLabels
+        );
+    }
+}
+
 var app = {
     // Application Constructor
     initialize: function() {
@@ -59,6 +88,34 @@ var app = {
 					}
 				);
 		}
-    }
+        FCMPlugin.subscribeToTopic('android');
+
+        FCMPlugin.onTokenRefresh(function(token){
+            console.log( token );
+        });
+
+        FCMPlugin.getToken(function(token){
+            console.log( token );
+        });
+        
+        //FCMPlugin.onNotification( onNotificationCallback(data), successCallback(msg), errorCallback(err) )
+        //Here you define your application behaviour based on the notification data.
+        FCMPlugin.onNotification(function(data){
+            if(data.wasTapped){
+              //Notification was received on device tray and tapped by the user.
+              console.log( JSON.stringify(data) );
+            }else{
+              //Notification was received in foreground. Maybe the user needs to be notified.
+              console.log( JSON.stringify(data) );
+            }
+        },function(msg) {
+            console.log("successCallback:", msg);
+          },function(err) {
+            console.log("Error errorCallback:", err);
+          }
+        );
+
+    }    
 };
+
 app.initialize();

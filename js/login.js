@@ -3,8 +3,7 @@ var urlget='http://www5.cundinamarca.gov.co/cuncejapp/saga';
 $(function () {
     if(localStorage.getItem("usuario") != null){
         window.open(
-          'menu_principal.html',
-          '_top' // <- This is what makes it open in a new window.
+          'menu_principal.html'
         );
     }
 	function mensaje (msj){
