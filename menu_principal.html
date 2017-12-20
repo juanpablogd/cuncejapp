@@ -49,6 +49,11 @@
         <!-- Main Container -->
         <div id="main-container" style="background:#0b3c5d">
             <a href="menu_principal.html"><img src="resources/cuncejapp-header.png" style="height:75px;margin-top:10px;"></a>
+            <div id="icoNotificacion">
+                <button type="button" class="btn btn-default" id="btn_noti" aria-label="Left Align" style="position: absolute;top: 14px;right: 15px;">
+                  <span class="glyphicon glyphicon-bell" aria-hidden="true">&nbsp;</span><span class="badge" id="nactual">0</span>
+                </button>
+            </div>
             
             <div class="content" >
               
@@ -144,11 +149,12 @@
         <script src="assets/js/core/jquery.countTo.min.js"></script>
         <script src="assets/js/core/jquery.placeholder.min.js"></script>
         <script src="assets/js/core/js.cookie.min.js"></script>
+        <script src="assets/js/core/js.cookie.min.js"></script>
+        <script src="libs/moment/moment-with-locales.min.js"></script>
+        <script src="js/menu_principal.js"></script>
         <script src="assets/js/app.js"></script>
-
         <script type="text/javascript" src="cordova.js"></script>
         <script type="text/javascript" src="js/ini_cordova.js"></script>
-        <script src="js/menu_principal.js"></script>
 
         <script>
             jQuery(function () {

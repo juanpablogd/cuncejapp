@@ -67,6 +67,9 @@ var app = {
         console.log(devicePlatform);
         if(devicePlatform == "iOS"){
         	StatusBar.overlaysWebView(false);
+            FCMPlugin.subscribeToTopic('ios');
+        }else{
+            FCMPlugin.subscribeToTopic('androidJP');
         }
 	    var networkState = navigator.connection.type;	console.log('Connection type: ' + networkState);
 	    if (networkState == Connection.NONE || networkState == Connection.UNKNOWN) {   console.log("Sin Conectividad");
@@ -88,7 +91,7 @@ var app = {
 					}
 				);
 		}
-        FCMPlugin.subscribeToTopic('android');
+        
 
         FCMPlugin.onTokenRefresh(function(token){
             console.log( token );
@@ -102,18 +105,23 @@ var app = {
         //Here you define your application behaviour based on the notification data.
         FCMPlugin.onNotification(function(data){
             if(data.wasTapped){
-              //Notification was received on device tray and tapped by the user.
-              console.log( JSON.stringify(data) );
+                //Notification was received on device tray and tapped by the user.
+                console.log("wasTapped: " + JSON.stringify(data));
+                console.log(data.enlace);
+                window.open(data.enlace+'.html');
             }else{
-              //Notification was received in foreground. Maybe the user needs to be notified.
-              console.log( JSON.stringify(data) );
-            }
+                //Notification was received in foreground. Maybe the user needs to be notified.
+                console.log("1er PLANO: " + JSON.stringify(data));
+            }   
         },function(msg) {
             console.log("successCallback:", msg);
-          },function(err) {
+        },function(err) {
             console.log("Error errorCallback:", err);
-          }
-        );
+        });
+
+
+        var badge = Number($("#nactual").text()); console.log(badge);
+        cordova.plugins.notification.badge.set(badge);
 
     }    
 };
