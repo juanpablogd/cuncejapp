@@ -4,7 +4,7 @@
     <head>
         <meta charset="utf-8">
 
-        <title>CunceApp</title>
+        <title>OneUI - Admin Dashboard Template &amp; UI Framework</title>
 
         <meta name="description" content="OneUI - Admin Dashboard Template &amp; UI Framework created by pixelcave and published on Themeforest">
         <meta name="author" content="pixelcave">
@@ -50,6 +50,9 @@
         <script src="libs/notify/bootstrap-notify.min.js"></script>		
 		<script type="text/javascript" src="cordova.js"></script>
 		<script type="text/javascript" src="js/ini_cordova.js"></script>
+        <!-- You can include a specific file from css/themes/ folder to alter the default color theme of the template. eg: -->
+        <!-- <link rel="stylesheet" id="css-theme" href="assets/css/themes/flat.min.css"> -->
+        <!-- END Stylesheets -->
     </head>
     <body>
         <!-- Page Container -->
@@ -59,7 +62,6 @@
                 <!-- Sidebar Scroll Container -->
                 <div id="sidebar-scroll">
                     <!-- Sidebar Content -->
-                    <!-- Adding .sidebar-mini-hide to an element will hide it when the sidebar is in mini mode -->
                     <div class="sidebar-content">
                         <!-- Side Header -->
                         <div class="side-header side-content bg-white-op" style="background:#e56949">
@@ -68,12 +70,12 @@
                                 <i class="fa fa-times"></i>
                             </button>
                             <!-- Themes functionality initialized in App() -> uiHandleTheme() -->
-                            
-                            <a class="h5 text-white" href="index.html">
-                                <img src="resources/CUNSEJAPP-2-fin-18.png" style="height:50px">
+                            <a class="h5 text-white" href="menu_principal.html">
+                                <img src="resources/CUNSEJAPP-2-fin-17.png" style="height:50px">
                             </a>
                         </div>
                         <!-- END Side Header -->
+
                         <!-- Side Content -->
                         <div class="side-content">
                             <ul class="nav-main">
@@ -110,7 +112,7 @@
                     </li>
                     <li class="hidden-md hidden-lg">
                         <div style="float:right;color:white">
-                            <img src="resources/CUNSEJAPP-2-fin-19.png" style="height:36px">
+                            <img src="resources/CUNSEJAPP-2-fin-17.png" style="height:36px">
                         </div>
                     </li>
 
@@ -120,17 +122,48 @@
             <!-- END Header -->
 
             <!-- Main Container -->
-            <main id="main-container">
-                <!-- Page Content -->
-                <div class="content" style="text-align: justify;">
-                    <iframe id="myIframe" style="width: 100%;height: 1366px" src="" frameborder="0" allowfullscreen></iframe>
-                </div> 
-                <!-- END Page Content -->
+            <main id="main-container" style="background:#0b3c5d">
+                <img src="resources/cuncejapp-header.png" style="height:75px;margin-top:10px;">
+                <div class="content" >
+                    <div class="row" style="margin-bottom:5px">
+                        <div class="col-md-1 col-xs-1">&nbsp;</div>
+                        <div class="col-md-5 col-xs-5">
+                            <div class="center-block">
+                                <a href="menu_nuestro_gobernador.html"><img class="img-responsive center-block" src="resources/Ico_NuestroGobernador.png" style="width:90%"></a>
+                            </div>
+                        </div>
+                        <div class="col-md-5 col-xs-5">
+                            <div class="center-block">
+                                <a href="menu_nuestros_diputados.html"><img class="img-responsive center-block" alt="Responsive image" src="resources/CUNSEAPP-06.png" style="width:90%"></a>
+                            </div>
+                        </div>
+                        <div class="col-md-1 col-xs-1">&nbsp;</div>
+                    </div>
+
+                    <div class="row" style="margin-bottom:5px">
+                        <div class="col-md-1 col-xs-1">&nbsp;</div>
+                        <div class="col-md-5 col-xs-5">
+                            <div class="center-block">
+                                <a href="menu_red_departamental.html"><img class="img-responsive center-block" src="resources/CUNSEAPP-05.png" style="width:90%"></a>
+                            </div>
+                        </div>
+                        <div class="col-md-5 col-xs-5">
+                            <div class="center-block">
+                                <a href="menu_nuestros_concejales.html"><img class="img-responsive center-block" alt="Responsive image" src="resources/CUNSEJAPP-fin-11.png" style="width:90%"></a>
+                            </div>
+                        </div>
+                        <div class="col-md-1 col-xs-1">&nbsp;</div>
+                    </div>                    
+                </div>                                                            
+            <!-- END Page Content -->
             </main>
             <!-- END Main Container -->
+
             <!-- END Footer -->
         </div>
         <!-- END Page Container -->
+
+        
 
         <!-- OneUI Core JS: jQuery, Bootstrap, slimScroll, scrollLock, Appear, CountTo, Placeholder, Cookie and App.js -->
         <script src="assets/js/core/jquery.slimscroll.min.js"></script>
@@ -140,7 +173,6 @@
         <script src="assets/js/core/jquery.placeholder.min.js"></script>
         <script src="assets/js/core/js.cookie.min.js"></script>
         <script src="assets/js/app.js"></script>
-        <script src="js/valogin.js"></script>
-        <script src="js/menu_asesoria_enlinea.js"></script>
+
     </body>
 </html>

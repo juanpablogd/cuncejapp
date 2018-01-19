@@ -112,6 +112,8 @@ var app = {
             }else{
                 //Notification was received in foreground. Maybe the user needs to be notified.
                 console.log("1er PLANO: " + JSON.stringify(data));
+                //msj,callback,titulo,nomBoton
+                alerta("Tienes una nueva notificación!",function() {window.open('notificaciones.html');},"CuncejApp","Ir")
             }   
         },function(msg) {
             console.log("successCallback:", msg);

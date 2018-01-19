@@ -10,6 +10,7 @@ function cargaNoti(){
     if(retrievedObject != null) {
         var arr = JSON.parse(retrievedObject);
         console.log('retrievedObject: ', arr);
+        $( "#listNoti" ).html('');
         for (var i = 0; i < arr.length; i++){
             var clactivo = '';
             var htmlNoti = '';
@@ -34,5 +35,27 @@ function cargaNoti(){
 }
 
 cargaNoti();
+
+setTimeout(function(){
+    /* Busca notificaciones */
+    var parametros = new Object();
+    parametros['app'] = 'cuncejapp';
+    $.ajax({
+        data:  parametros,
+        url:'http://saga.cundinamarca.gov.co/SIG/servicios/apps/notificaciones.php',
+        type:  'post',
+        async: false,       //timeout: 30000,
+        success: function(responsef){ 
+            var testObject = JSON.parse(responsef.replace(/&quot;/g,'"'));  console.log(testObject);
+            localStorage.setItem('nt', JSON.stringify(testObject));
+        },
+        error: function (error) {
+            console.log(error);
+        }
+    }).always(function() {
+        console.log("Busca Notificaciones");
+        cargaNoti();
+    });
+}, 50);
 
 };
