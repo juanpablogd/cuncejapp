@@ -20,7 +20,6 @@ function cargaCursos(){
                             '<span class="visible-xs" style="font-size: 11px;"> <span class="glyphicon glyphicon glyphicon-time  c-info" data-toggle="tooltip" title="CuncejApp"></span>&nbsp;<span class="">Inicio: '+arr[i].fecha_inicio+'</span><br/></span>'+
                             '<span class="visible-xs" style="font-size: 11px;"> <span class="glyphicon glyphicon glyphicon-blackboard  c-info" data-toggle="tooltip" title="CuncejApp"></span>&nbsp;<span class="">Modalidad: '+arr[i].modalidad+'</span><br/></span>'+
                             '<span class="visible-xs" style="font-size: 11px;"><span class="glyphicon glyphicon glyphicon-home  c-info" data-toggle="tooltip" title="CuncejApp"></span>&nbsp;<span class="">'+arr[i].institucion+'</span><br/></span>'+
-                            '<button type="button" class="btn btn-default">Left</button>'+
                         '</div>'+
                         '<div class="clearfix"></div>'+
                         '</a>'

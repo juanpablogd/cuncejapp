@@ -6,7 +6,6 @@ window.onload = function() {
 			    "Opción solo para usuarios registrados, quiere acceder?",  // message
 			    function(buttonIndex){	console.log(buttonIndex);
 			    	if(buttonIndex == undefined || buttonIndex =="2"){ 
-			    		//window.location="login.html";
 						window.open('login.html');
 			    	}
 			    },         				// callback
