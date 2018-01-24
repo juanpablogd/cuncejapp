@@ -42,29 +42,18 @@
 
         <!-- Bootstrap and OneUI CSS framework -->
         <link rel="stylesheet" href="assets/css/bootstrap.min.css">
-		<link href="./libs/font-aw/css/font-awesome.min.css" rel="stylesheet">
-		<link rel="stylesheet" href="./libs/dialog/css/bootstrap-dialog.min.css" >
-        <link rel="stylesheet" id="css-main" href="assets/css/oneui_saga.css">
-		<link rel="stylesheet" href="libs/notify/animate.css">
-		
-		<link rel="stylesheet" href="./css/diputados.css">
-		
+        <link rel="stylesheet" id="css-main" href="assets/css/oneui.css">
+        <link rel="stylesheet" href="libs/notify/animate.css">
         <script src="assets/js/core/jquery.min.js"></script>
         <script src="assets/js/core/bootstrap.min.js"></script>
-        <script src="libs/notify/bootstrap-notify.min.js"></script>		
-		<script type="text/javascript" src="cordova.js"></script>
-		<script type="text/javascript" src="js/ini_cordova.js"></script>
-		<script src="./libs/dialog/js/bootstrap-dialog.min.js"></script>
-
-
-        <!-- You can include a specific file from css/themes/ folder to alter the default color theme of the template. eg: -->
-        <!-- <link rel="stylesheet" id="css-theme" href="assets/css/themes/flat.min.css"> -->
+        <script src="libs/notify/bootstrap-notify.min.js"></script>     
+        <script type="text/javascript" src="cordova.js"></script>
+        <script type="text/javascript" src="js/ini_cordova.js"></script>
         <!-- END Stylesheets -->
     </head>
     <body>
         <!-- Page Container -->
         <div id="page-container" class="sidebar-l sidebar-o side-scroll header-navbar-fixed">
-
             <!-- Sidebar -->
             <nav id="sidebar" style="background:#144061">
                 <!-- Sidebar Scroll Container -->
@@ -127,47 +116,21 @@
                     </li>
 
                 </ul>                
-                <a href="menu_directorio.html" class="btn btn-info" role="button" style="background:#d83022;float: right;"><i class="fa fa-history" aria-hidden="true"></i></a>
+                <a href="menu_nuestro_plan.html" class="btn btn-info" role="button" style="background:#d83022;float: right;"><i class="fa fa-history" aria-hidden="true"></i></a>
             </header>
             <!-- END Header -->
-
             <!-- Main Container -->
-            <div id="main-container">
-
+            <main id="main-container">
                 <!-- Page Content -->
                 <div class="content" style="text-align: justify;">
-                    
-                    <div class="row">
-  						<div class="container">
-						    <div class="row">
-						        <div class="col-sm-6 col-sm-offset-3">
-						            <div id="container_busqueda"> 
-						                <div class="input-group stylish-input-group input-append">
-						                    <input id="busqueda" type="text" class="form-control"  placeholder="Buscar Plabra Clave..." >
-						                    <span class="input-group-addon">
-						                        <button type="submit">
-						                            <span class="glyphicon glyphicon-search"></span>
-						                        </button>  
-						                    </span>
-						                </div>
-						        	</div>
-								</div>
-							</div>
-						</div>
-					 	<div class="container lista" style="overflow-y: visible">
-	                    </div>
-                	</div>
-                </div>
+                    <iframe  id="" style="width: 100%;height: 1366px" src="libs\pdf\web\np-4eje.html" frameborder="0" allowfullscreen></iframe>
+                </div> 
                 <!-- END Page Content -->
-            </div>
+            </main>
             <!-- END Main Container -->
-
             <!-- END Footer -->
         </div>
         <!-- END Page Container -->
-
-        
-
         <!-- OneUI Core JS: jQuery, Bootstrap, slimScroll, scrollLock, Appear, CountTo, Placeholder, Cookie and App.js -->
         <script src="assets/js/core/jquery.slimscroll.min.js"></script>
         <script src="assets/js/core/jquery.scrollLock.min.js"></script>
@@ -177,7 +140,5 @@
         <script src="assets/js/core/js.cookie.min.js"></script>
         <script src="assets/js/app.js"></script>
 
-
     </body>
-    <script src="./js/gabinete.js"></script>
 </html>

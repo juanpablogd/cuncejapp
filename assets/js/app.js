@@ -876,27 +876,6 @@ var App = function() {
     };
 
     /*
-     * CKEditor init, for more examples you can check out http://ckeditor.com/
-     *
-     * App.initHelper('ckeditor');
-     *
-     */
-    var uiHelperCkeditor = function(){
-        // Disable auto init when contenteditable property is set to true
-        CKEDITOR.disableAutoInline = true;
-
-        // Init inline text editor
-        if (jQuery('#js-ckeditor-inline').length) {
-            CKEDITOR.inline('js-ckeditor-inline');
-        }
-
-        // Init full text editor
-        if (jQuery('#js-ckeditor').length) {
-            CKEDITOR.replace('js-ckeditor');
-        }
-    };
-
-    /*
      * Summernote init, for more examples you can check out http://summernote.org/
      *
      * App.initHelper('summernote');

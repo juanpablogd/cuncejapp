@@ -66,24 +66,6 @@
     </head>
     <body>
         <!-- Page Container -->
-        <!--
-            Available Classes:
-
-            'enable-cookies'             Remembers active color theme between pages (when set through color theme list)
-
-            'sidebar-l'                  Left Sidebar and right Side Overlay
-            'sidebar-r'                  Right Sidebar and left Side Overlay
-            'sidebar-mini'               Mini hoverable Sidebar (> 991px)
-            'sidebar-o'                  Visible Sidebar by default (> 991px)
-            'sidebar-o-xs'               Visible Sidebar by default (< 992px)
-
-            'side-overlay-hover'         Hoverable Side Overlay (> 991px)
-            'side-overlay-o'             Visible Side Overlay by default (> 991px)
-
-            'side-scroll'                Enables custom scrolling on Sidebar and Side Overlay instead of native scrolling (> 991px)
-
-            'header-navbar-fixed'        Enables fixed header
-        -->
         <div id="page-container" class="sidebar-l sidebar-o side-scroll header-navbar-fixed">
 
             <!-- Sidebar -->
@@ -91,7 +73,6 @@
                 <!-- Sidebar Scroll Container -->
                 <div id="sidebar-scroll">
                     <!-- Sidebar Content -->
-                    <!-- Adding .sidebar-mini-hide to an element will hide it when the sidebar is in mini mode -->
                     <div class="sidebar-content">
                         <!-- Side Header -->
                         <div class="side-header side-content bg-white-op" style="background:#e56949">
@@ -100,80 +81,30 @@
                                 <i class="fa fa-times"></i>
                             </button>
                             <!-- Themes functionality initialized in App() -> uiHandleTheme() -->
-                            
-                            <a class="h5 text-white" href="index.html">
-                                <img src="resources/CUNSEJAPP-2-fin-17.png" style="height:50px">
+                            <a class="h5 text-white" href="menu_principal.html">
+                                <img src="resources/cuncejapp-transparente.png" style="height:50px">
                             </a>
                         </div>
                         <!-- END Side Header -->
 
                         <!-- Side Content -->
                         <div class="side-content">
-                            <ul class="nav-main">
-								<!-- 0 -->
-<li>
-                                <a class="active" href="menu_principal.html"><span class="sidebar-mini-hide">INICIO</span></a>
-                                </li>
-								<!-- 1 -->
-                                <li>
-                                    <a href="menu_nuestro_plan.html"><span class="sidebar-mini-hide">NUESTRO PLAN</span></a>
-                                </li>
-								<!-- 2 -->
-                                <li>
-                                    <a href="menu_banco_normativo.html"><span class="sidebar-mini-hide">BANCO NORMATIVO</span></a>
-                                </li>
-								<!-- 3 -->
-                                <li>
-                                    <a href="menu_asesoria_enlinea.html"><span class="sidebar-mini-hide">ASESORÍA EN LINEA</span></a>
-                                </li>
-								<!-- 4 -->
-                                <li>
-                                    <a href="menu_nuestro_gobernador.html"><span class="sidebar-mini-hide">NUESTRO GOBERNADOR</span></a>
-                                    
-                                </li>
-								<!-- 5 -->
-                                <li>
-				<a href="menu_nuestros_diputados.html"><span class="sidebar-mini-hide">NUESTROS DIPUTADOS</span></a>
-					
-                                    
-                                </li>
-								<!-- 6 -->
-                                <li>
-				<a href="menu_red_departamental.html"><span class="sidebar-mini-hide">NUESTRO GABINETE</span></a>
-                                    
-                                </li>
-								<!-- 7 -->
-                                <li>
-				<a href="menu_nuestros_concejales.html"><span class="sidebar-mini-hide">NUESTROS CONCEJALES</span></a>
-                                    
-                                </li>
-								<!-- 8 -->
-                                <li>
-				 <a href="menu_formacion.html"><span class="sidebar-mini-hide">FORMACIÓN</span></a>
-                                   
-                                </li>
-								<!-- 9 -->
-                                <li>
-				 <a href="menu_comunidad.html"><span class="sidebar-mini-hide">COMUNIDAD</span></a>
-                                   
-                                </li> 
-								<!--
-                                <li>
-                                    <a href="chat/index.html"><span class="sidebar-mini-hide">CONCEJALES EN RED</span></a>
-                                </li --> 
-								<!-- 11 -->
-                                <li>
-                                    <a href="menu_tu_opinion.html"><span class="sidebar-mini-hide">TU OPINI&Oacute;N</span></a>
-                                </li> 
-								<!-- 12 -->
-				<li>
-                                    <a href="menu_videotic.html"><span class="sidebar-mini-hide">VIDEO TIC</span></a>
-                                </li> 
-								<!-- 13 -->
-				<li>
-                                    <a href="menu_noticias.html"><span class="sidebar-mini-hide">NOTICIAS</span></a>
-                                </li>  
-                            </ul>
+                            <div class="side-content">
+                                <ul class="nav-main">
+                                    <li><a class="active" href="menu_principal.html"><span class="sidebar-mini-hide">INICIO</span></a></li>
+                                    <li><a href="menu_asesoria_enlinea.html"><span class="sidebar-mini-hide">ASESORÍA EN LINEA</span></a></li>
+                                    <li><a href="menu_formacion.html"><span class="sidebar-mini-hide">FORMACIÓN</span></a></li>
+                                    <li><a href="menu_banco_normativo.html"><span class="sidebar-mini-hide">BANCO NORMATIVO</span></a></li>
+                                    <li><a href="menu_nuestros_servicios.html"><span class="sidebar-mini-hide">NUESTROS SERVICIOS</span></a></li>
+                                    <li><a href="menu_directorio.html"><span class="sidebar-mini-hide">DIRECTORIO</span></a></li>
+                                    <li><a href="menu_indicadores.html"><span class="sidebar-mini-hide">INDICADORES</span></a></li>
+                                    <li><a href="menu_videotic.html"><span class="sidebar-mini-hide">VIDEOTIC</span></a></li>
+                                    <li><a href="menu_noticias.html"><span class="sidebar-mini-hide">NOTICIAS</span></a></li>
+                                    <li>
+                                        <a href="#" onclick="localStorage.clear();window.open('login.html');return false;"><span class="sidebar-mini-hide">SALIR</span></a>
+                                    </li>
+                                </ul>
+                            </div>
                         </div>
                         <!-- END Side Content -->
                     </div>
@@ -194,7 +125,7 @@
                     </li>
                     <li class="hidden-md hidden-lg">
                         <div style="float:right;color:white">
-                            <img src="resources/CUNSEJAPP-2-fin-17.png" style="height:36px">
+                            <img src="resources/cuncejapp-transparente.png" style="height:36px">
                         </div>
                     </li>
 

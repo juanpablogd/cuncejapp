@@ -66,7 +66,7 @@ $(function () {
 		                '<div class="panel-heading">'+
 		                    html_nombre+
 		                    '<h5><span class="glyphicon glyphicon-map-marker text-muted c-info"></span><span>  '+value.mun+'</span> </h5>'+
-		                    '<h5><span class="glyphicon glyphicon-bookmark text-muted c-info"></span><span>  '+value.cargo+'</span> </h5>'+
+//		                    '<h5><span class="glyphicon glyphicon-bookmark text-muted c-info"></span><span>  '+value.cargo+'</span> </h5>'+
 		                '</div>'+
 		                '<div class="panel-body">'+
 		                    html_telefono+
