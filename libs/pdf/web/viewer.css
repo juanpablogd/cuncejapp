@@ -12,6 +12,18 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
+.download
+{
+    display:none !important;    
+}
+.print
+{
+    display:none !important;
+}
+.openfile
+{
+    display:none !important;
+}
 
 .textLayer {
   position: absolute;

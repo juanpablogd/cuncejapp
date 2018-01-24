@@ -1858,7 +1858,7 @@ var PDFJS = pdfjsLib.PDFJS;
  * @var {boolean}
  */
 PDFJS.disableFullscreen = (PDFJS.disableFullscreen === undefined ?
-                           false : PDFJS.disableFullscreen);
+                           true : PDFJS.disableFullscreen);
 
 /**
  * Enables CSS only zooming.
@@ -8739,9 +8739,10 @@ function webViewerInitialized() {
   fileInput.oncontextmenu = noContextMenuHandler;
   document.body.appendChild(fileInput);
 
-  if (!window.File || !window.FileReader || !window.FileList || !window.Blob) {
     appConfig.toolbar.openFile.setAttribute('hidden', 'true');
-    appConfig.secondaryToolbar.openFileButton.setAttribute('hidden', 'true');
+	appConfig.secondaryToolbar.openFileButton.setAttribute('hidden', 'true');
+  if (!window.File || !window.FileReader || !window.FileList || !window.Blob) {
+
   } else {
     fileInput.value = null;
   }
