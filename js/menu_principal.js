@@ -35,6 +35,10 @@ window.onload = function() {
 		acceso('menu_tu_opinion');
 	});
 
+	$('#menu_asesoria_enlinea_correo').click(function(){
+		acceso('menu_asesoria_enlinea_correo');
+	});
+
 	$('#btn_noti').click(function(){
 		window.open(
 		  'notificaciones.html'

@@ -4,7 +4,7 @@
     <head>
         <meta charset="utf-8">
 
-        <title>OneUI - Admin Dashboard Template &amp; UI Framework</title>
+        <title>CunceApp</title>
 
         <meta name="description" content="OneUI - Admin Dashboard Template &amp; UI Framework created by pixelcave and published on Themeforest">
         <meta name="author" content="pixelcave">
@@ -41,20 +41,22 @@
         <link rel="stylesheet" href="assets/js/plugins/slick/slick-theme.min.css">
 
         <!-- Bootstrap and OneUI CSS framework -->
-        <link rel="stylesheet" href="assets/css/bootstrap.min.css">
-        <link rel="stylesheet" id="css-main" href="assets/css/oneui.css">
         
+        <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+        
+        <link rel="stylesheet" id="css-main" href="assets/css/oneui_saga.css">
+        <link rel="stylesheet" href="./css/formacion.css">
+
         <link rel="stylesheet" href="libs/notify/animate.css">
         <script src="assets/js/core/jquery.min.js"></script>
         <script src="assets/js/core/bootstrap.min.js"></script>
         <script src="libs/notify/bootstrap-notify.min.js"></script>     
-        <script type="text/javascript" src="cordova.js"></script>
-        <script type="text/javascript" src="js/ini_cordova.js"></script>
         <!-- END Stylesheets -->
     </head>
     <body>
         <!-- Page Container -->
         <div id="page-container" class="sidebar-l sidebar-o side-scroll header-navbar-fixed">
+
             <!-- Sidebar -->
             <nav id="sidebar" style="background:#144061">
                 <!-- Sidebar Scroll Container -->
@@ -68,7 +70,8 @@
                                 <i class="fa fa-times"></i>
                             </button>
                             <!-- Themes functionality initialized in App() -> uiHandleTheme() -->
-                            <a class="h5 text-white" href="menu_principal.html">
+                            
+                            <a class="h5 text-white" href="index.html">
                                 <img src="resources/cuncejapp-transparente.png" style="height:50px">
                             </a>
                         </div>
@@ -76,22 +79,20 @@
 
                         <!-- Side Content -->
                         <div class="side-content">
-                            <div class="side-content">
-                                <ul class="nav-main">
-                                    <li><a class="active" href="menu_principal.html"><span class="sidebar-mini-hide">INICIO</span></a></li>
-                                    <li><a href="menu_asesoria_enlinea.html"><span class="sidebar-mini-hide">ASESORÍA EN LINEA</span></a></li>
-                                    <li><a href="menu_formacion.html"><span class="sidebar-mini-hide">FORMACIÓN</span></a></li>
-                                    <li><a href="menu_banco_normativo.html"><span class="sidebar-mini-hide">BANCO NORMATIVO</span></a></li>
-                                    <li><a href="menu_nuestros_servicios.html"><span class="sidebar-mini-hide">NUESTROS SERVICIOS</span></a></li>
-                                    <li><a href="menu_directorio.html"><span class="sidebar-mini-hide">DIRECTORIO</span></a></li>
-                                    <li><a href="menu_indicadores.html"><span class="sidebar-mini-hide">INDICADORES</span></a></li>
-                                    <li><a href="menu_videotic.html"><span class="sidebar-mini-hide">VIDEOTIC</span></a></li>
-                                    <li><a href="menu_noticias.html"><span class="sidebar-mini-hide">NOTICIAS</span></a></li>
-                                    <li>
-                                        <a href="#" onclick="localStorage.clear();window.open('login.html');return false;"><span class="sidebar-mini-hide">SALIR</span></a>
-                                    </li>
-                                </ul>
-                            </div>
+                            <ul class="nav-main">
+                                <li><a class="active" href="menu_principal.html"><span class="sidebar-mini-hide">INICIO</span></a></li>
+                                <li><a href="menu_asesoria_enlinea.html"><span class="sidebar-mini-hide">ASESORÍA EN LINEA</span></a></li>
+                                <li><a href="menu_formacion.html"><span class="sidebar-mini-hide">FORMACIÓN</span></a></li>
+                                <li><a href="menu_banco_normativo.html"><span class="sidebar-mini-hide">BANCO NORMATIVO</span></a></li>
+                                <li><a href="menu_nuestros_servicios.html"><span class="sidebar-mini-hide">NUESTROS SERVICIOS</span></a></li>
+                                <li><a href="menu_directorio.html"><span class="sidebar-mini-hide">DIRECTORIO</span></a></li>
+                                <li><a href="menu_indicadores.html"><span class="sidebar-mini-hide">INDICADORES</span></a></li>
+                                <li><a href="menu_videotic.html"><span class="sidebar-mini-hide">VIDEOTIC</span></a></li>
+                                <li><a href="menu_noticias.html"><span class="sidebar-mini-hide">NOTICIAS</span></a></li>
+                                <li>
+                                    <a href="#" onclick="localStorage.clear();window.open('login.html');return false;"><span class="sidebar-mini-hide">SALIR</span></a>
+                                </li>
+                            </ul>
                         </div>
                         <!-- END Side Content -->
                     </div>
@@ -112,55 +113,33 @@
                     </li>
                     <li class="hidden-md hidden-lg">
                         <div style="float:right;color:white">
-                            <img src="resources/cuncejapp-transparente.png" style="height:36px">
+                            <img src="resources/cuncejapp-transparente.png" style="height:35px">    
                         </div>
                     </li>
-
-                </ul>                
-                <a href="menu_principal.html" class="btn btn-info" role="button" style="background:#d83022;float: right;"><i class="fa fa-home" aria-hidden="true"></i></a>
+                </ul>
+                <a href="menu_principal.html" class="btn btn-info pull-right" role="button" style="background:#d83022;float: center;"><i class="fa fa-home" aria-hidden="true"></i></a>
             </header>
             <!-- END Header -->
-
             <!-- Main Container -->
-            <main id="main-container" style="background:#0b3c5d"></br>
-                <div class="content" >
-                    <div class="row" style="margin-bottom:5px">
-                        <div class="col-md-1 col-xs-1">&nbsp;</div>
-                        <div class="col-md-5 col-xs-5">
-                            <div class="center-block">
-                                <a id ="menu_tu_opinion" href="#"><img class="img-responsive center-block" src="resources/formacionFormal.png" style="width:90%"></a>
-                            </div>
-                        </div>
-                        <div class="col-md-5 col-xs-5">
-                            <div class="center-block">
-                                <a id ="menu_tu_opinion" href="#"><img class="img-responsive center-block" src="resources/formacionEsap.png" style="width:90%"></a>
-                            </div>
-                        </div>
-                        <div class="col-md-1 col-xs-1">&nbsp;</div>
-                    </div>
+            <div id="main-container">
 
-                    <div class="row" style="margin-bottom:50px">
-                        <div class="col-md-1 col-xs-1">&nbsp;</div>
-                        <div class="col-md-5 col-xs-5">
-                            <div class="center-block">
-                                <a id ="menu_tu_opinion" href="#"><img class="img-responsive center-block" src="resources/formacionCursos.png" style="width:90%"></a>
-                            </div>
+                <!-- Page Content -->
+                <div class="content" style="text-align: justify;">
+                    
+                        <div class="container lista" style="overflow-y: visible">
+
                         </div>
-                        <div class="col-md-5 col-xs-5">
-                            <div class="center-block">
-                                <!--a href="menu_faq.html"><img class="img-responsive center-block" alt="Responsive image" src="resources/faq.png" style="width:90%"></a -->
-                            </div>
-                        </div>
-                        <div class="col-md-1 col-xs-1">&nbsp;</div>
                     </div>
-                </div>                                                            
-                <!-- END Page Content -->
-            </main>
+                </div>
+                  <!-- END Page Content -->
+            </div>
             <!-- END Main Container -->
 
             <!-- END Footer -->
         </div>
         <!-- END Page Container -->
+
+        
 
         <!-- OneUI Core JS: jQuery, Bootstrap, slimScroll, scrollLock, Appear, CountTo, Placeholder, Cookie and App.js -->
         <script src="assets/js/core/jquery.slimscroll.min.js"></script>
@@ -168,10 +147,14 @@
         <script src="assets/js/core/jquery.appear.min.js"></script>
         <script src="assets/js/core/jquery.countTo.min.js"></script>
         <script src="assets/js/core/jquery.placeholder.min.js"></script>
-        <script src="libs/moment/moment-with-locales.min.js"></script>
         <script src="assets/js/core/js.cookie.min.js"></script>
-        <script src="js/menu_principal.js"></script>
+        <script src="libs/moment/moment-with-locales.min.js"></script>
         <script src="assets/js/app.js"></script>
+        <script src="js/valogin.js"></script>
+        <script src="js/menu_formacion.js"></script>
+          <!--script src="./js/concejales.js"></script-->
 
+        <script type="text/javascript" src="cordova.js"></script>
+        <script type="text/javascript" src="js/ini_cordova.js"></script>
     </body>
 </html>
