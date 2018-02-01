@@ -53,26 +53,7 @@
     </head>
     <body>
         <!-- Page Container -->
-        <!--
-            Available Classes:
-
-            'enable-cookies'             Remembers active color theme between pages (when set through color theme list)
-
-            'sidebar-l'                  Left Sidebar and right Side Overlay
-            'sidebar-r'                  Right Sidebar and left Side Overlay
-            'sidebar-mini'               Mini hoverable Sidebar (> 991px)
-            'sidebar-o'                  Visible Sidebar by default (> 991px)
-            'sidebar-o-xs'               Visible Sidebar by default (< 992px)
-
-            'side-overlay-hover'         Hoverable Side Overlay (> 991px)
-            'side-overlay-o'             Visible Side Overlay by default (> 991px)
-
-            'side-scroll'                Enables custom scrolling on Sidebar and Side Overlay instead of native scrolling (> 991px)
-
-            'header-navbar-fixed'        Enables fixed header
-        -->
         <div id="page-container" class="sidebar-l sidebar-o side-scroll header-navbar-fixed">
-
             <!-- Sidebar -->
             <nav id="sidebar" style="background:#144061">
                 <!-- Sidebar Scroll Container -->
@@ -87,13 +68,11 @@
                                 <i class="fa fa-times"></i>
                             </button>
                             <!-- Themes functionality initialized in App() -> uiHandleTheme() -->
-                            
                             <a class="h5 text-white" href="index.html">
                                 <img src="resources/cuncejapp-transparente.png" style="height:50px">
                             </a>
                         </div>
                         <!-- END Side Header -->
-
                         <!-- Side Content -->
                         <div class="side-content">
                             <ul class="nav-main">
@@ -128,34 +107,23 @@
                 </ul>                
             </header>
             <!-- END Header -->
-
             <!-- Main Container -->
             <main id="main-container">
-
-
-
-
                 <!-- Page Content -->
                 <div class="content" style="text-align: justify;">
-                    
                     <div class="row">
-
-                      <video width="100%" height="360" src="http://www5.cundinamarca.gov.co/cuncejapp/resources/videotour.mp4" type="video/mp4" 
+                        <video width="100%" height="360" src="resources/videotour.mp4" type="video/mp4" 
 	id="player1" poster="resources/index_photo.png" 
-	controls="controls" preload="none"></video>
-                                
-                                
-                                </div>
-                        </div> 
-                </div>
+	controls="controls" preload="auto" autoplay="true">
+                        </video>
+                    </div>
+                </div> 
                 <!-- END Page Content -->
             </main>
             <!-- END Main Container -->
-
             <!-- END Footer -->
         </div>
         <!-- END Page Container -->
-
         
 
         <!-- OneUI Core JS: jQuery, Bootstrap, slimScroll, scrollLock, Appear, CountTo, Placeholder, Cookie and App.js -->

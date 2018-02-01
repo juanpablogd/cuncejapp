@@ -4,7 +4,7 @@
     <head>
         <meta charset="utf-8">
 
-        <title>OneUI - Admin Dashboard Template &amp; UI Framework</title>
+        <title>CunceApp</title>
 
         <meta name="description" content="OneUI - Admin Dashboard Template &amp; UI Framework created by pixelcave and published on Themeforest">
         <meta name="author" content="pixelcave">
@@ -43,39 +43,22 @@
         <!-- Bootstrap and OneUI CSS framework -->
         <link rel="stylesheet" href="assets/css/bootstrap.min.css">
         <link rel="stylesheet" id="css-main" href="assets/css/oneui.css">
-
-        <!-- You can include a specific file from css/themes/ folder to alter the default color theme of the template. eg: -->
-        <!-- <link rel="stylesheet" id="css-theme" href="assets/css/themes/flat.min.css"> -->
-        <!-- END Stylesheets -->
+        
+        <link rel="stylesheet" href="libs/notify/animate.css">
+        <script src="assets/js/core/jquery.min.js"></script>
+        <script src="assets/js/core/bootstrap.min.js"></script>
+        <script src="libs/notify/bootstrap-notify.min.js"></script>     
+        <script type="text/javascript" src="cordova.js"></script>
+        <script type="text/javascript" src="js/ini_cordova.js"></script>
     </head>
     <body>
         <!-- Page Container -->
-        <!--
-            Available Classes:
-
-            'enable-cookies'             Remembers active color theme between pages (when set through color theme list)
-
-            'sidebar-l'                  Left Sidebar and right Side Overlay
-            'sidebar-r'                  Right Sidebar and left Side Overlay
-            'sidebar-mini'               Mini hoverable Sidebar (> 991px)
-            'sidebar-o'                  Visible Sidebar by default (> 991px)
-            'sidebar-o-xs'               Visible Sidebar by default (< 992px)
-
-            'side-overlay-hover'         Hoverable Side Overlay (> 991px)
-            'side-overlay-o'             Visible Side Overlay by default (> 991px)
-
-            'side-scroll'                Enables custom scrolling on Sidebar and Side Overlay instead of native scrolling (> 991px)
-
-            'header-navbar-fixed'        Enables fixed header
-        -->
         <div id="page-container" class="sidebar-l sidebar-o side-scroll header-navbar-fixed">
-
             <!-- Sidebar -->
             <nav id="sidebar" style="background:#144061">
                 <!-- Sidebar Scroll Container -->
                 <div id="sidebar-scroll">
                     <!-- Sidebar Content -->
-                    <!-- Adding .sidebar-mini-hide to an element will hide it when the sidebar is in mini mode -->
                     <div class="sidebar-content">
                         <!-- Side Header -->
                         <div class="side-header side-content bg-white-op" style="background:#e56949">
@@ -84,80 +67,30 @@
                                 <i class="fa fa-times"></i>
                             </button>
                             <!-- Themes functionality initialized in App() -> uiHandleTheme() -->
-                            
-                            <a class="h5 text-white" href="menu_banco_normativo.html">
-                                <img src="resources/CUNSEJAPP-2-fin-17.png" style="height:50px">
+                            <a class="h5 text-white" href="menu_principal.html">
+                                <img src="resources/cuncejapp-transparente.png" style="height:50px">
                             </a>
                         </div>
                         <!-- END Side Header -->
 
                         <!-- Side Content -->
                         <div class="side-content">
-                            <ul class="nav-main">
-								<!-- 0 -->
- <li>
-                                <a class="active" href="menu_principal.html"><span class="sidebar-mini-hide">INICIO</span></a>
-                                </li>
-								<!-- 1 -->
-                                <li>
-                                    <a href="menu_nuestro_plan.html"><span class="sidebar-mini-hide">NUESTRO PLAN</span></a>
-                                </li>
-								<!-- 2 -->
-                                <li>
-                                    <a href="menu_banco_normativo.html"><span class="sidebar-mini-hide">BANCO NORMATIVO</span></a>
-                                </li>
-								<!-- 3 -->
-                                <li>
-                                    <a href="menu_asesoria_enlinea.html"><span class="sidebar-mini-hide">ASESORÍA EN LINEA</span></a>
-                                </li>
-								<!-- 4 -->
-                                <li>
-                                    <a href="menu_nuestro_gobernador.html"><span class="sidebar-mini-hide">NUESTRO GOBERNADOR</span></a>
-                                    
-                                </li>
-								<!-- 5 -->
-                                <li>
-				<a href="menu_nuestros_diputados.html"><span class="sidebar-mini-hide">NUESTROS DIPUTADOS</span></a>
-					
-                                    
-                                </li>
-								<!-- 6 -->
-                                <li>
-				<a href="menu_red_departamental.html"><span class="sidebar-mini-hide">NUESTRO GABINETE</span></a>
-                                    
-                                </li>
-								<!-- 7 -->
-                                <li>
-				<a href="menu_nuestros_concejales.html"><span class="sidebar-mini-hide">NUESTROS CONCEJALES</span></a>
-                                    
-                                </li>
-								<!-- 8 -->
-                                <li>
-				 <a href="menu_formacion.html"><span class="sidebar-mini-hide">FORMACIÓN</span></a>
-                                   
-                                </li>
-								<!-- 9 -->
-                                <li>
-				 <a href="menu_comunidad.html"><span class="sidebar-mini-hide">COMUNIDAD</span></a>
-                                   
-                                </li> 
-								<!--
-                                <li>
-                                    <a href="chat/index.html"><span class="sidebar-mini-hide">CONCEJALES EN RED</span></a>
-                                </li --> 
-								<!-- 11 -->
-                                <li>
-                                    <a href="menu_tu_opinion.html"><span class="sidebar-mini-hide">TU OPINI&Oacute;N</span></a>
-                                </li> 
-								<!-- 12 -->
-				<li>
-                                    <a href="menu_videotic.html"><span class="sidebar-mini-hide">VIDEO TIC</span></a>
-                                </li> 
-								<!-- 13 -->
-				<li>
-                                    <a href="menu_noticias.html"><span class="sidebar-mini-hide">NOTICIAS</span></a>
-                                </li>   
-                            </ul>
+                            <div class="side-content">
+                                <ul class="nav-main">
+                                    <li><a class="active" href="menu_principal.html"><span class="sidebar-mini-hide">INICIO</span></a></li>
+                                    <li><a href="menu_asesoria_enlinea.html"><span class="sidebar-mini-hide">ASESORÍA EN LINEA</span></a></li>
+                                    <li><a href="menu_formacion.html"><span class="sidebar-mini-hide">FORMACIÓN</span></a></li>
+                                    <li><a href="menu_banco_normativo.html"><span class="sidebar-mini-hide">BANCO NORMATIVO</span></a></li>
+                                    <li><a href="menu_nuestros_servicios.html"><span class="sidebar-mini-hide">NUESTROS SERVICIOS</span></a></li>
+                                    <li><a href="menu_directorio.html"><span class="sidebar-mini-hide">DIRECTORIO</span></a></li>
+                                    <li><a href="menu_indicadores.html"><span class="sidebar-mini-hide">INDICADORES</span></a></li>
+                                    <li><a href="menu_videotic.html"><span class="sidebar-mini-hide">VIDEOTIC</span></a></li>
+                                    <li><a href="menu_noticias.html"><span class="sidebar-mini-hide">NOTICIAS</span></a></li>
+                                    <li>
+                                        <a href="#" onclick="localStorage.clear();window.open('login.html');return false;"><span class="sidebar-mini-hide">SALIR</span></a>
+                                    </li>
+                                </ul>
+                            </div>
                         </div>
                         <!-- END Side Content -->
                     </div>
@@ -178,7 +111,7 @@
                     </li>
                     <li class="hidden-md hidden-lg">
                         <div style="float:right;color:white">
-                            <img src="resources/CUNSEJAPP-2-fin-17.png" style="height:36px">
+                            <img src="resources/cuncejapp-transparente.png" style="height:36px">
                         </div>
                     </li>
 
@@ -186,23 +119,24 @@
                 <a href="menu_banco_normativo.html" class="btn btn-info" role="button" style="background:#d83022;float: right;"><i class="fa fa-history" aria-hidden="true"></i></a>
             </header>
             <!-- END Header -->
-
+            
             <!-- Main Container -->
             <main id="main-container">
                 <!-- Page Content -->
                 <div class="content" style="text-align: justify;">
                     <div class="row">
-						<iframe style="width: 96%;height: 1270px;" src="http://www5.cundinamarca.gov.co/cuncejapp/resources/pdfjs/web/viewer.html" frameborder="0" allowfullscreen></iframe>
-                    </div>                        
-                </div>
+                        <video width="100%" height="360" src="resources/CNPC.mp4" type="video/mp4" 
+    id="player1" poster="resources/CNP.jpg" 
+    controls="controls" controlsList="nodownload" preload="auto">
+                        </video>
+                    </div>
+                </div> 
                 <!-- END Page Content -->
             </main>
             <!-- END Main Container -->
-
             <!-- END Footer -->
         </div>
         <!-- END Page Container -->
-
         
 
         <!-- OneUI Core JS: jQuery, Bootstrap, slimScroll, scrollLock, Appear, CountTo, Placeholder, Cookie and App.js -->
@@ -215,7 +149,11 @@
         <script src="assets/js/core/jquery.placeholder.min.js"></script>
         <script src="assets/js/core/js.cookie.min.js"></script>
         <script src="assets/js/app.js"></script>
-
+        <script type="text/javascript">
+            if(localStorage.getItem("usuario") == null){
+                $(".opciones").hide();
+            }
+        </script>
 
     </body>
 </html>
