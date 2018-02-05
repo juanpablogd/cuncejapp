@@ -4,7 +4,7 @@
     <head>
         <meta charset="utf-8">
 
-        <title>OneUI - Admin Dashboard Template &amp; UI Framework</title>
+        <title>CunceApp</title>
 
         <meta name="description" content="OneUI - Admin Dashboard Template &amp; UI Framework created by pixelcave and published on Themeforest">
         <meta name="author" content="pixelcave">
@@ -50,7 +50,6 @@
         <script src="libs/notify/bootstrap-notify.min.js"></script>		
 		<script type="text/javascript" src="cordova.js"></script>
 		<script type="text/javascript" src="js/ini_cordova.js"></script>
-        <!-- END Stylesheets -->
     </head>
     <body>
         <!-- Page Container -->
@@ -60,6 +59,7 @@
                 <!-- Sidebar Scroll Container -->
                 <div id="sidebar-scroll">
                     <!-- Sidebar Content -->
+                    <!-- Adding .sidebar-mini-hide to an element will hide it when the sidebar is in mini mode -->
                     <div class="sidebar-content">
                         <!-- Side Header -->
                         <div class="side-header side-content bg-white-op" style="background:#e56949">
@@ -68,30 +68,28 @@
                                 <i class="fa fa-times"></i>
                             </button>
                             <!-- Themes functionality initialized in App() -> uiHandleTheme() -->
-                            <a class="h5 text-white" href="menu_principal.html">
+                            
+                            <a class="h5 text-white" href="index.html">
                                 <img src="resources/cuncejapp-transparente.png" style="height:50px">
                             </a>
                         </div>
                         <!-- END Side Header -->
-
                         <!-- Side Content -->
                         <div class="side-content">
-                            <div class="side-content">
-                                <ul class="nav-main">
-                                    <li><a class="active" href="menu_principal.html"><span class="sidebar-mini-hide">INICIO</span></a></li>
-                                    <li><a href="menu_asesoria_enlinea.html"><span class="sidebar-mini-hide">ASESORÍA EN LINEA</span></a></li>
-                                    <li><a href="menu_formacion.html"><span class="sidebar-mini-hide">FORMACIÓN</span></a></li>
-                                    <li><a href="menu_banco_normativo.html"><span class="sidebar-mini-hide">BANCO NORMATIVO</span></a></li>
-                                    <li><a href="menu_nuestros_servicios.html"><span class="sidebar-mini-hide">NUESTROS SERVICIOS</span></a></li>
-                                    <li><a href="menu_directorio.html"><span class="sidebar-mini-hide">DIRECTORIO</span></a></li>
-                                    <li><a href="menu_indicadores.html"><span class="sidebar-mini-hide">INDICADORES</span></a></li>
-                                    <li><a href="menu_videotic.html"><span class="sidebar-mini-hide">VIDEOTIC</span></a></li>
-                                    <li><a href="menu_noticias.html"><span class="sidebar-mini-hide">NOTICIAS</span></a></li>
-                                    <li>
-                                        <a href="#" onclick="localStorage.clear();window.open('login.html');return false;"><span class="sidebar-mini-hide">SALIR</span></a>
-                                    </li>
-                                </ul>
-                            </div>
+                            <ul class="nav-main">
+                                <li><a class="active" href="menu_principal.html"><span class="sidebar-mini-hide">INICIO</span></a></li>
+                                <li><a href="menu_asesoria_enlinea.html"><span class="sidebar-mini-hide">ASESORÍA EN LINEA</span></a></li>
+                                <li><a href="menu_formacion.html"><span class="sidebar-mini-hide">FORMACIÓN</span></a></li>
+                                <li><a href="menu_banco_normativo.html"><span class="sidebar-mini-hide">BANCO NORMATIVO</span></a></li>
+                                <li><a href="menu_nuestros_servicios.html"><span class="sidebar-mini-hide">NUESTROS SERVICIOS</span></a></li>
+                                <li><a href="menu_directorio.html"><span class="sidebar-mini-hide">DIRECTORIO</span></a></li>
+                                <li><a href="menu_indicadores.html"><span class="sidebar-mini-hide">INDICADORES</span></a></li>
+                                <li><a href="menu_videotic.html"><span class="sidebar-mini-hide">VIDEOTIC</span></a></li>
+                                <li><a href="menu_noticias.html"><span class="sidebar-mini-hide">NOTICIAS</span></a></li>
+                                <li>
+                                    <a href="#" onclick="localStorage.clear();window.open('login.html');return false;"><span class="sidebar-mini-hide">SALIR</span></a>
+                                </li>
+                            </ul>
                         </div>
                         <!-- END Side Content -->
                     </div>
@@ -117,47 +115,19 @@
                     </li>
 
                 </ul>                
-                <a href="menu_principal.html" class="btn btn-info" role="button" style="background:#d83022;float: right;"><i class="fa fa-home" aria-hidden="true"></i></a>
+                <a href="menu_tips.html" class="btn btn-info" role="button" style="background:#d83022;float: right;"><i class="fa fa-history" aria-hidden="true"></i></a>
             </header>
             <!-- END Header -->
 
             <!-- Main Container -->
-            <main id="main-container" style="background:#0b3c5d"></br>
-                <div class="content" >
-                    <div class="row" style="margin-bottom:5px">
-                        <div class="col-md-1 col-xs-1">&nbsp;</div>
-                        <div class="col-md-5 col-xs-5">
-                            <div class="center-block">
-                                <a id ="menu_tu_opinion" href="#"><img class="img-responsive center-block" src="resources/CUNSEAPP-08.png" style="width:90%"></a>
-                            </div>
-                        </div>
-                        <div class="col-md-5 col-xs-5">
-                            <div class="center-block">
-                                <a href="#"><img class="img-responsive center-block" alt="Responsive image" src="resources/nuestroPortafolio.png" style="width:90%"></a>
-                            </div>
-                        </div>
-                        <div class="col-md-1 col-xs-1">&nbsp;</div>
-                    </div>
-
-                    <div class="row" style="margin-bottom:50px">
-                        <div class="col-md-1 col-xs-1">&nbsp;</div>
-                        <div class="col-md-5 col-xs-5">
-                            <div class="center-block">
-                                <!-- a href="menu_nuestro_plan.html"><img class="img-responsive center-block" src="resources/CUNSEAPP-02.png" style="width:90%"></a -->
-                            </div>
-                        </div>
-                        <div class="col-md-5 col-xs-5">
-                            <div class="center-block">
-                                <!--a href="menu_faq.html"><img class="img-responsive center-block" alt="Responsive image" src="resources/faq.png" style="width:90%"></a -->
-                            </div>
-                        </div>
-                        <div class="col-md-1 col-xs-1">&nbsp;</div>
-                    </div>
-                </div>                                                            
+            <main id="main-container">
+                <!-- Page Content -->
+                <div class="content" style="text-align: justify;">
+                    <iframe id="myIframe" style="width: 100%;height: 1366px" src="" frameborder="0" allowfullscreen></iframe>
+                </div> 
                 <!-- END Page Content -->
             </main>
             <!-- END Main Container -->
-
             <!-- END Footer -->
         </div>
         <!-- END Page Container -->
@@ -168,10 +138,9 @@
         <script src="assets/js/core/jquery.appear.min.js"></script>
         <script src="assets/js/core/jquery.countTo.min.js"></script>
         <script src="assets/js/core/jquery.placeholder.min.js"></script>
-        <script src="libs/moment/moment-with-locales.min.js"></script>
         <script src="assets/js/core/js.cookie.min.js"></script>
-        <script src="js/menu_principal.js"></script>
         <script src="assets/js/app.js"></script>
-
+        <script src="js/valogin.js"></script>
+        <script src="js/menu_tip_detalle.js"></script>
     </body>
 </html>

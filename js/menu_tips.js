@@ -1,10 +1,10 @@
-function irCurso(id){
-    localStorage.setItem("tmp_curso", id);
+function irTip(id){
+    localStorage.setItem("tmp_tip", id);
     console.log(id);
     setTimeout(function(){
-/*        window.open(
-          'menu_formacion_detalle.html'
-        );  */ 
+        window.open(
+          'menu_tip_detalle.html'
+        ); 
     }, 50);
 }
 
@@ -19,6 +19,7 @@ function cargaCursos(){
         $( ".lista" ).html('<br>');
         for (var i = 1; i < (registros+1); i++){
             var htmlItem = '';  console.log(arr[i]);
+            
                 $(".lista").append(
                     
                 '<div class="row">'+
@@ -29,10 +30,8 @@ function cargaCursos(){
                             '<span class="lbTitulo" style="font-size: inherit;"> '+arr[i].titulo+'</span><br/>'+
                         '</div>'+
                         '<div class="panel-body">'+
-                            '<span class="visible-xs" style="font-size: 11px;"> <span class="glyphicon glyphicon glyphicon-time  " data-toggle="tooltip" title="CuncejApp"></span>&nbsp;<span class="">Inicio: '+arr[i].fecha_inicio+'</span><br/></span>'+
-                            '<span class="visible-xs" style="font-size: 11px;"> <span class="glyphicon glyphicon glyphicon-blackboard  " data-toggle="tooltip" title="CuncejApp"></span>&nbsp;  <span class="">Modalidad: '+arr[i].modalidad+'</span><br/></span>'+
-                            '<span class="visible-xs" style="font-size: 11px;"><span class="glyphicon glyphicon glyphicon-home " data-toggle="tooltip" title="CuncejApp"></span>&nbsp;<span class="">'+arr[i].institucion+'</span><br/></span>'+
-                            '<center><button type="button" class="btn btn-primary btn-sm " onclick="irCurso('+arr[i].id+')"  ><span class="glyphicon glyphicon-share-alt "></span> Ver Más</button><center>'+
+                            '<span class="visible-xs" style="font-size: 11px;"> <span class="glyphicon glyphicon glyphicon-blackboard  " data-toggle="tooltip" title="CuncejApp"></span>&nbsp;  <span class="">Modalidad: '+arr[i].descripcion+'</span><br/></span>'+
+                            '<center><button type="button" class="btn btn-primary btn-sm " onclick="irTip('+arr[i].id+')" ><span class="glyphicon glyphicon-share-alt "></span> Ver Más</button><center>'+
                         '</div>'+
                     '</div>'+
                 '</div>'+
@@ -47,7 +46,7 @@ setTimeout(function(){
     var parametros = new Object();  //parametros['app'] = 'cuncejapp';
     $.ajax({
         data:  parametros,
-        url:'http://www5.cundinamarca.gov.co/cuncejapp/saga/servicios/GetCursos.php?tipo=Formal',
+        url:'http://www5.cundinamarca.gov.co/cuncejapp/saga/servicios/GetTips.php',
         type:  'post',
         async: false,       //timeout: 30000,
         success: function(responsef){ 
