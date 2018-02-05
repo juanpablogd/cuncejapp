@@ -1,5 +1,11 @@
 function irCurso(id){
+    localStorage.setItem("tmp_curso", id);
     console.log(id);
+    setTimeout(function(){
+        window.open(
+          'menu_formacion_detalle.html'
+        ); 
+    }, 50);
 }
 
 $(document).ready(function(){
@@ -27,7 +33,7 @@ function cargaCursos(){
                             '<span class="visible-xs" style="font-size: 11px;"> <span class="glyphicon glyphicon glyphicon-time  " data-toggle="tooltip" title="CuncejApp"></span>&nbsp;<span class="">Inicio: '+arr[i].fecha_inicio+'</span><br/></span>'+
                             '<span class="visible-xs" style="font-size: 11px;"> <span class="glyphicon glyphicon glyphicon-blackboard  " data-toggle="tooltip" title="CuncejApp"></span>&nbsp;  <span class="">Modalidad: '+arr[i].modalidad+'</span><br/></span>'+
                             '<span class="visible-xs" style="font-size: 11px;"><span class="glyphicon glyphicon glyphicon-home " data-toggle="tooltip" title="CuncejApp"></span>&nbsp;<span class="">'+arr[i].institucion+'</span><br/></span>'+
-                            '<center><a href="menu_formacion_incripcion.html"><button type="button" class="btn btn-primary btn-sm "  ><span class="glyphicon glyphicon-share-alt "></span> Ver Más</button></a><center>'+
+                            '<center><button type="button" class="btn btn-primary btn-sm " onclick="irCurso('+arr[i].id+')" ><span class="glyphicon glyphicon-share-alt "></span> Ver Más</button><center>'+
                         '</div>'+
                     '</div>'+
                 '</div>'+
