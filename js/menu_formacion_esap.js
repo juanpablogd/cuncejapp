@@ -26,13 +26,11 @@ function cargaCursos(){
                     '<div class="[ panel panel-default ] panel-google-plus">'+
                         '<div class="panel-heading">'+
                             '<span class="glyphicon glyphicon glyphicon-book  c-info" data-toggle="tooltip" title="CuncejApp"></span>'+
-                            '<span class="lbTitulo" style="font-size: inherit;"> '+arr[i].titulo+'</span><br/>'+
+                            '<span class="lbTitulo" style="font-size: inherit;"> '+arr[i].institucion+'</span><br/>'+
                         '</div>'+
                         '<div class="panel-body">'+
-                            '<span class="visible-xs" style="font-size: 11px;"> <span class="glyphicon glyphicon glyphicon-time  " data-toggle="tooltip" title="CuncejApp"></span>&nbsp;<span class="">Inicio: '+arr[i].fecha_inicio+'</span><br/></span>'+
-                            '<span class="visible-xs" style="font-size: 11px;"> <span class="glyphicon glyphicon glyphicon-blackboard  " data-toggle="tooltip" title="CuncejApp"></span>&nbsp;  <span class="">Modalidad: '+arr[i].modalidad+'</span><br/></span>'+
-                            '<span class="visible-xs" style="font-size: 11px;"><span class="glyphicon glyphicon glyphicon-home " data-toggle="tooltip" title="CuncejApp"></span>&nbsp;<span class="">'+arr[i].institucion+'</span><br/></span>'+
-                            '<center><button type="button" class="btn btn-primary btn-sm " onclick="irCurso('+arr[i].id+')" ><span class="glyphicon glyphicon-share-alt "></span> Ver Más</button><center>'+
+                            '<img src="resources/cursos/'+arr[i].id+'.png" style="width: 100%;" onclick="irCurso('+arr[i].id+')">'+
+//                            '<center><button type="button" class="btn btn-primary btn-sm " onclick="irCurso('+arr[i].id+')" ><span class="glyphicon glyphicon-share-alt "></span> Ver Más</button><center>'+
                         '</div>'+
                     '</div>'+
                 '</div>'+
