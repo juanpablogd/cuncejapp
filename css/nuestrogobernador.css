@@ -6,6 +6,10 @@
   margin: 20px 0 10px;  
 }
 
+.img-circle {
+    border-radius: 34%;
+}
+
 /*social buttons*/
 .btn-social{
   color: white;
