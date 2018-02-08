@@ -20,7 +20,6 @@ function cargaCursos(){
         for (var i = 1; i < (registros+1); i++){
             var htmlItem = '';  console.log(arr[i]);
                 $(".lista").append(
-                    
                 '<div class="row">'+
                 '<div class="[ col-xs-12 col-sm-offset-1 col-sm-12 ]">'+
                     '<div class="[ panel panel-default ] panel-google-plus">'+
@@ -37,7 +36,6 @@ function cargaCursos(){
                     '</div>'+
                 '</div>'+
             '</div>')
-            
         }
     }
 }
