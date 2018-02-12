@@ -12,7 +12,7 @@ window.onload = function() {
 			        }
 		    	});
 		    }
-	    }, 100);
+	    }, 200);
 	}else{
 		$.each(obj, function( index, value ) {      console.log(value + " " + index);
 	        if(index == "cedula"){
