@@ -1,4 +1,4 @@
-var urlget='http://www5.cundinamarca.gov.co/cuncejapp/saga';
+var urlget='http://saga.cundinamarca.gov.co/apps/cuncejapp';
 
 $(function () {
     if(localStorage.getItem("usuario") != null){
@@ -42,7 +42,7 @@ $(function () {
 			  			window.open(
 						  'login.html'
 						); 
-					}, 4*1000);
+					}, 4*100000);
         		}else{
         			mensaje(data,"danger");
         		}

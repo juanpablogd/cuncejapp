@@ -1,4 +1,5 @@
-var urlget='http://www5.cundinamarca.gov.co/cuncejapp/saga/';
+var urlget='http://saga.cundinamarca.gov.co/apps/cuncejapp';
+var urlArchivos='http://saga.cundinamarca.gov.co/SIG/data/doc/cuncejapp/normatividad/';
 //var urlget='.';
 function modalData(id){
 	$( "body" ).scrollTop(0);
@@ -29,10 +30,7 @@ function modalData(id){
 														'</a>'+
 													'</li>'+	
 													'<li >'+ //'<a   download  class="pull-right" >Descargar Ley</a>'+
-													'<button type="button" onclick="window.open(\''+value.url+'\', \'_system\', \'location=no\');" class="btn btn-primary btn-sm pull-right">Descargar</button>'+
-													//'<button type="button" '+
-													//'onclick="location.href=\'\'"'
-													//+'  class="pull-right btn btn-primary btn-xs"><span class="fa fa-file-pdf-o "></span> VER PDF</button>'+
+													'<button type="button" onclick="window.open(\''+urlArchivos+value.url+'\', \'_system\', \'location=no\');" class="btn btn-primary btn-sm pull-right">Descargar</button>'+
 													'</li>'+													
 												'</ul>'+
 											'</div>'+
@@ -84,8 +82,7 @@ $(function () {
 		  	
 		  	var longitud=Object.keys(data).length;
 			$.getJSON( urlget+"/servicios/GetCuentaNorma.php" 
-			,function( datosCuenta ) {
-				//console.log(datosCuenta[1]);
+			,function( datosCuenta ) {	console.log(datosCuenta[1]);
 				$(".lista").empty();
 			 	if(longitud>99) $(".lista").append('<center><h6 class="text-muted c-info"> Mostrando '+longitud+' resultados de '+datosCuenta[1].cuenta+'.<h6><center>');
 				else $(".lista").append('<center><h6 class="text-muted c-info"> '+longitud+' resultados de '+datosCuenta[1].cuenta+'.<h6><center>');

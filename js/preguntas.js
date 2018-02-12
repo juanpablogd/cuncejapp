@@ -1,4 +1,4 @@
-var urlget='http://www5.cundinamarca.gov.co/cuncejapp/saga';
+var urlget='http://saga.cundinamarca.gov.co/apps/cuncejapp';
 
 function modalData(id){
 	$( "body" ).scrollTop(0);
