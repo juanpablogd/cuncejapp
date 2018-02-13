@@ -4,7 +4,13 @@ window.onload = function() {
 	    setTimeout(function(){
 		    var networkState = navigator.connection.type;	console.log('Connection type: ' + networkState);
 		    if (networkState != Connection.NONE && networkState != Connection.UNKNOWN) {
-	            $('#myIframe').attr('src', 'http://saga.cundinamarca.gov.co/apps/cundidata/');
+		        var devicePlatform = device.platform;
+		        console.log(devicePlatform);
+		        if(devicePlatform == "iOS"){
+		        	var ref = cordova.InAppBrowser.open('http://saga.cundinamarca.gov.co/apps/cundidata/', '_system', 'location=no');
+		        }else{
+					$('#myIframe').attr('src', 'http://saga.cundinamarca.gov.co/apps/cundidata/');
+		        }
 		    }
 	    }, 200);
 	}else{
