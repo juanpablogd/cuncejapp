@@ -9,7 +9,7 @@ window.onload = function() {
 		        if(devicePlatform == "iOS"){
 		        	var ref = cordova.InAppBrowser.open('http://saga.cundinamarca.gov.co/apps/cundidata/', '_system', 'location=no');
 		        	setTimeout(function(){
-		        			window.open('menu_principal.html'); 
+		        		window.open('menu_principal.html');
 		        	}, 50);	
 		        }else{
 					$('#myIframe').attr('src', 'http://saga.cundinamarca.gov.co/apps/cundidata/');
