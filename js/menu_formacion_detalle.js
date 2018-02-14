@@ -18,8 +18,12 @@ window.onload = function() {
 				  },
 				  type: 'GET',
 				  success: function( result ) {
-					alert("Se ha inscrito con el codigo: " + result);
-				  	window.open('menu_formacion.html');
+				  	if($.isNumeric(result)){
+						alert("Se ha inscrito con el codigo: " + result);
+					  	window.open('menu_formacion.html');				  		
+					  }else{
+					  	alert("No se realizó la Preincripción, revise la red por favor.");
+					  }
 				  },
 	              error: function(result) {
 	              	alert("No se realizó la Preincripción, revise la red por favor.");
