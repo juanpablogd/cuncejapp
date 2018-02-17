@@ -113,7 +113,14 @@ var app = {
                 //Notification was received in foreground. Maybe the user needs to be notified.
                 console.log("1er PLANO: " + JSON.stringify(data));
                 //msj,callback,titulo,nomBoton
-                alerta("Tienes una nueva notificación!",function() {window.open('notificaciones.html');},"CuncejApp","Ir")
+                alerta("Tienes una nueva notificación!",function() { 
+                        var isCordovaApp = !!window.cordova; console.log(isCordovaApp);
+                        if(isCordovaApp){
+                            window.open('notificaciones.html');            
+                        }else{
+                            window.open('notificaciones.html','_self');
+                        }
+                },"CuncejApp","Ir");
             }   
         },function(msg) {
             console.log("successCallback:", msg);

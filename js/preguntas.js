@@ -75,7 +75,7 @@ $(function () {
 				}
 				$(".lista").append(
 				    '<div class="row">'+
-			        '<div class="[ col-xs-12 col-sm-offset-1 col-sm-12 ] bloque">'+
+			        '<div class="col-xs-12 col-sm-11 col-lg-6 bloque">'+
 			            '<div class="[ panel panel-default ] panel-google-plus">'+
 			                '<div class="panel-heading">'+
 			                	'<span class="glyphicon glyphicon-question-sign "></span> '+

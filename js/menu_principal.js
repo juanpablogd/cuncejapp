@@ -6,16 +6,24 @@ window.onload = function() {
 			    "Opción solo para usuarios registrados, quiere acceder?",  // message
 			    function(buttonIndex){	console.log(buttonIndex);
 			    	if(buttonIndex == undefined || buttonIndex =="2"){ 
-						window.open('login.html');
+					        var isCordovaApp = !!window.cordova; console.log(isCordovaApp);
+					        if(isCordovaApp){
+					            window.open('login.html');            
+					        }else{
+					            window.open('login.html','_self');
+					        }
 			    	}
 			    },         				// callback
 			    'Cuncejapp',            	// title
 			    ['Si','No']           	// buttonName
 			);
 		}else {
-			window.open(
-			  opcion+'.html'
-			);
+	        var isCordovaApp = !!window.cordova; console.log(isCordovaApp);
+	        if(isCordovaApp){
+	            window.open(opcion+'.html');            
+	        }else{
+	            window.open(opcion+'.html','_self');
+	        }
 		}
 	}
 
@@ -81,7 +89,7 @@ window.onload = function() {
 		data:  parametros,
 		url:'http://saga.cundinamarca.gov.co/SIG/servicios/apps/notificaciones.php',
 		type:  'post',
-		async: false,		//timeout: 30000,
+		async: true,		//timeout: 30000,
 		success: function(responsef){ 
 			var testObject = JSON.parse(responsef.replace(/&quot;/g,'"'));	console.log(testObject);
 			localStorage.setItem('nt', JSON.stringify(testObject));

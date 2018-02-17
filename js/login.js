@@ -2,9 +2,12 @@ var urlget='http://saga.cundinamarca.gov.co/apps/cuncejapp';
 
 $(function () {
     if(localStorage.getItem("usuario") != null){
-        window.open(
-          'menu_principal.html'
-        );
+        var isCordovaApp = !!window.cordova; console.log(isCordovaApp);
+        if(isCordovaApp){
+            window.open('menu_principal.html');            
+        }else{
+            window.open('menu_principal.html','_self');
+        }
     }
 	function mensaje (msj){
 	    $.notify({  icon: 'glyphicon glyphicon-warning-sign',

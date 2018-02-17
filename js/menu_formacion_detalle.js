@@ -2,6 +2,8 @@ window.onload = function() {
 	$('#myIframe').attr('src', 'libs/pdf/web/detalleCurso.html');
 
 	$('#btn_inscribirse').click(function () {
+		$("#cargando").show();
+		$('#btn_inscribirse').hide();
 		var cedula = '';
 		var id_curso = '';
 		var obj = JSON.parse(localStorage.getItem("usuario"));
@@ -18,15 +20,25 @@ window.onload = function() {
 				  },
 				  type: 'GET',
 				  success: function( result ) {
+					$("#cargando").hide();
+					$('#btn_inscribirse').show();
 				  	if($.isNumeric(result)){
-						alert("Se ha inscrito con el codigo: " + result);
-					  	window.open('menu_formacion.html');				  		
+				  		alerta("Se ha inscrito con el codigo: "+ result,function() {
+		                    var isCordovaApp = !!window.cordova; console.log(isCordovaApp);
+	                        if(isCordovaApp){
+	                            window.open('menu_formacion.html');            
+	                        }else{
+	                            window.open('menu_formacion.html','_self');
+	                        }
+				  		},"CuncejApp","Ir");
 					  }else{
-					  	alert("No se realizó la Preincripción, revise la red por favor.");
+					  	alerta("No se realizó la Preincripción, revise la red por favor."+ result,function() {},"CuncejApp","Ir");
 					  }
 				  },
 	              error: function(result) {
-	              	alert("No se realizó la Preincripción, revise la red por favor.");
+					$("#cargando").hide();
+					$('#btn_inscribirse').show();
+	              	alerta("No se realizó la Preincripción, revise la red por favor."+ result,function() {},"CuncejApp","Ir");
 	              }
 				});
 	        }

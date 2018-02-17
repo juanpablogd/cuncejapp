@@ -20,21 +20,26 @@ function cargaCursos(){
         for (var i = 1; i < (registros+1); i++){
             var htmlItem = '';  console.log(arr[i]);
             
-                $(".lista").append(
-                '<div class="row">'+
-                '<div class="[ col-xs-12 col-sm-offset-1 col-sm-12 ]">'+
+            $(".lista").append(
+            '<div class="row" onclick="irCurso('+arr[i].id+')">'+
+                '<div class="col-xs-12 col-sm-11 col-lg-6">'+
                     '<div class="[ panel panel-default ] panel-google-plus">'+
                         '<div class="panel-heading">'+
                             '<span class="glyphicon glyphicon glyphicon-book  c-info" data-toggle="tooltip" title="CuncejApp"></span>'+
                             '<span class="lbTitulo" style="font-size: inherit;"> '+arr[i].institucion+'</span><br/>'+
                         '</div>'+
-                        '<div class="panel-body">'+
-                            '<img src="resources/cursos/'+arr[i].id+'.png" style="width: 100%;" onclick="irCurso('+arr[i].id+')">'+
-//                            '<center><button type="button" class="btn btn-primary btn-sm " onclick="irCurso('+arr[i].id+')" ><span class="glyphicon glyphicon-share-alt "></span> Ver Más</button><center>'+
+                        '<div class="panel-body" style="background-color: #053d59;">'+
+                            '<div class="row"><br>'+
+                              '<div class="col-xs-8 col-md-8" style="color: white;left: 10px;"><p style="margin-bottom: 0px;">'+arr[i].titulo+'</p></div>'+
+                              '<div class="col-xs-4 col-md-4"><img src="resources/cursos/cursoFecha.png" style="width: 100%;"><div class="center" style="position: absolute;top: 32%;left: 20%;color: lightgoldenrodyellow;">'+arr[i].fecha_inicio+'</div></img></div>'+
+                            '</div>'+
+                            '<div class="row">'+
+                                '<div class="col-xs-4 col-xs-offset-4"><img src="resources/cursos/verMas.png" style="width: 100%;"/></div>'+
+                            '</div>'+
                         '</div>'+
                     '</div>'+
                 '</div>'+
-            '</div>')
+            '</div>');
             
         }
     }
