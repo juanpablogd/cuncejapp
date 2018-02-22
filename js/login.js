@@ -51,9 +51,12 @@ $(function () {
         		}else{
         			localStorage.setItem("usuario", JSON.stringify(data[1]));
 			  		setTimeout(function(){
-			  			window.open(
-						  'menu_principal.html'
-						); 
+                        var isCordovaApp = !!window.cordova; console.log(isCordovaApp);
+                        if(isCordovaApp){
+                            window.open('menu_principal.html');            
+                        }else{
+                            window.open('menu_principal.html','_self');
+                        }
 					}, 50);
         		}
         });
