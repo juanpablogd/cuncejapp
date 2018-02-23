@@ -18,14 +18,14 @@ $(function () {
 	  };
 	})();
 	
-		$.getJSON( urlget+"/servicios/GetMunicipio.php", function( data ) {
-				$.each(data, function( index, value ) {
-					$("#sel1").append(
-					'<option value="'+value.municipio+'" >'+value.municipio+'</option>'
-					);
-					
-				});
-		});
+	$.getJSON( urlget+"/servicios/GetMunicipio.php", function( data ) {
+			$.each(data, function( index, value ) {
+				$("#sel1").append(
+				'<option value="'+value.municipio+'" >'+value.municipio+'</option>'
+				);
+				
+			});
+	});
 	function busqueda(){
 		$.getJSON( urlget+"/servicios/GetConcejales.php", 
 		  {

@@ -6,12 +6,12 @@ window.onload = function() {
 			    "Opción solo para usuarios registrados, quiere acceder?",  // message
 			    function(buttonIndex){	console.log(buttonIndex);
 			    	if(buttonIndex == undefined || buttonIndex =="2"){ 
-					        var isCordovaApp = !!window.cordova; console.log(isCordovaApp);
-					        if(isCordovaApp){
-					            window.open('login.html');            
-					        }else{
-					            window.open('login.html','_self');
-					        }
+				        var isCordovaApp = !!window.cordova; console.log(isCordovaApp);
+				        if(isCordovaApp){
+				            window.open('login.html');            
+				        }else{
+				            window.open('login.html','_self');
+				        }
 			    	}
 			    },         				// callback
 			    'Cuncejapp',            	// title
@@ -48,10 +48,22 @@ window.onload = function() {
 	});
 
 	$('#btn_noti').click(function(){
-		window.open(
-		  'notificaciones.html'
-		);
+        var isCordovaApp = !!window.cordova; console.log(isCordovaApp);
+        if(isCordovaApp){
+            window.open('notificaciones.html');            
+        }else{
+            window.open('notificaciones.html','_self');
+        }
 	});
+	
+	$('#btnSalir').click(function(){
+		localStorage.clear();
+		var isCordovaApp = !!window.cordova;	//console.log(isCordovaApp);
+		if(isCordovaApp){window.open('login.html');}
+		else{window.open('login.html','_self');};
+		return false;
+	});
+	
 
 	function verNoti(){
 		var ahora = moment().locale('es');			//console.log(ahora);
@@ -61,8 +73,7 @@ window.onload = function() {
 		// Retrieve the object from storage
 		var retrievedObject = localStorage.getItem('nt');	//console.log(retrievedObject);
 		if(retrievedObject != null) {
-			var arr = JSON.parse(retrievedObject);
-			console.log('retrievedObject: ', arr);
+			var arr = JSON.parse(retrievedObject);	//console.log('retrievedObject: ', arr);
 			var notiActual = 0;
 			for (var i = 0; i < arr.length; i++){
 				var fecNoti = moment(arr[i].fecha_hora);	//console.log(fecNoti);
@@ -91,7 +102,7 @@ window.onload = function() {
 		type:  'post',
 		async: true,		//timeout: 30000,
 		success: function(responsef){ 
-			var testObject = JSON.parse(responsef.replace(/&quot;/g,'"'));	console.log(testObject);
+			var testObject = JSON.parse(responsef.replace(/&quot;/g,'"'));	//console.log(testObject);
 			localStorage.setItem('nt', JSON.stringify(testObject));
 		},
 		error: function (error) {
