@@ -5,7 +5,7 @@ function modalData(id){
 	$( "body" ).scrollTop(0);
 	$.getJSON( urlget+"/servicios/GetIdNormatividad.php", 
 		  {
-		  	id: id	    
+		  	id: id
 		  },function( data ) {
 			var value=data[1];
 			if (value.epigrafe != null && value.epigrafe !== undefined) {
@@ -66,10 +66,10 @@ $(function () {
 	    timer = setTimeout(callback, ms);
 	  };
 	})();
-	$.getJSON( urlget+"/servicios/GetTipoNorma.php", function( data ) {
+	$.getJSON( urlget+"/servicios/GetTipoNorma.php?categoria="+localStorage.noro , function( data ) {
 				$.each(data, function( index, value ) {
 					$("#sel1").append(
-					'<option value="'+value.tipo+'" >'+value.tipo+'</option>'
+					'<option value="'+value.subcategoria+'" >'+value.subcategoria+'</option>'
 					);
 					
 				});
@@ -77,15 +77,17 @@ $(function () {
 	function busqueda(){
 		$.getJSON(urlget+"/servicios/GetNormatividad.php", 
 		  {cl: datoInput,
-		  	tipo:$("#sel1").val()}
+		  	subcategoria:$("#sel1").val(),
+		  	categoria: localStorage.noro
+		  }
 		  ,function( data ) {
 		  	
 		  	var longitud=Object.keys(data).length;
-			$.getJSON( urlget+"/servicios/GetCuentaNorma.php" 
+			$.getJSON( urlget+"/servicios/GetCuentaNorma.php?categoria="+localStorage.noro+"&subcategoria="+$("#sel1").val()
 			,function( datosCuenta ) {	console.log(datosCuenta[1]);
 				$(".lista").empty();
 			 	if(longitud>99) $(".lista").append('<center><h6 class="text-muted c-info"> Mostrando '+longitud+' resultados de '+datosCuenta[1].cuenta+'.<h6><center>');
-				else $(".lista").append('<center><h6 class="text-muted c-info"> '+longitud+' resultados de '+datosCuenta[1].cuenta+'.<h6><center>');
+				else $(".lista").append('<center><h6 class="text-muted c-info">'+localStorage.noro+':  '+longitud+' resultados de '+datosCuenta[1].cuenta+'.<h6><center>');
 		  	
 			$.each(data, function( index, value ) {
 				if (value.epigrafe != null && value.epigrafe !== undefined) {
