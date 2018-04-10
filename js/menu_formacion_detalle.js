@@ -1,5 +1,5 @@
 window.onload = function() {
-	$('#myIframe').attr('src', 'libs/pdf/web/detalleCurso.html');
+	$('#myIframe').attr('src', 'http://saga.cundinamarca.gov.co/apps/cuncejapp/pdf-viewer/web/viewer.php?codigo='+localStorage.getItem("tmp_curso"));
 
 	$('#btn_inscribirse').click(function () {
 		$("#cargando").show();

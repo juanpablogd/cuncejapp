@@ -59,7 +59,7 @@ setTimeout(function(){
     var parametros = new Object();  //parametros['app'] = 'cuncejapp';
     $.ajax({
         data:  parametros,
-        url:'http://saga.cundinamarca.gov.co/apps/cuncejapp/servicios/GetCursos.php?tipo=cursoGob',
+        url:'http://saga.cundinamarca.gov.co/apps/cuncejapp/servicios/GetCursos.php?tipo=cursoGob&tipo2=cursoESAP',
         type:  'post',
         async: false,       //timeout: 30000,
         success: function(responsef){ 
