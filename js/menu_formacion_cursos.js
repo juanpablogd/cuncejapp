@@ -51,9 +51,9 @@ function cargaCursos(){
 $("#AbrirSitio").click(function(){
     var isCordovaApp = !!window.cordova; console.log(isCordovaApp);
     if(isCordovaApp){
-        var ref = cordova.InAppBrowser.open('http://www4.cundinamarca.gov.co/aulavirtual/', '_self', 'location=yes');
+        var ref = cordova.InAppBrowser.open('http://aulavirtual.cundinamarca.gov.co/aulavirtual32/moodle/', '_self', 'location=yes');
     }else{
-        window.open('http://www4.cundinamarca.gov.co/aulavirtual/');
+        window.open('http://aulavirtual.cundinamarca.gov.co/aulavirtual32/moodle/');
     }
 });
 
