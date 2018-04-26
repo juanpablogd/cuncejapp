@@ -4,7 +4,7 @@
     <head>
         <meta charset="utf-8">
 
-        <title>CunceApp</title>
+        <title>Cuncejapp</title>
 
         <meta name="description" content="OneUI - Admin Dashboard Template &amp; UI Framework created by pixelcave and published on Themeforest">
         <meta name="author" content="pixelcave">
@@ -30,25 +30,84 @@
         <link rel="apple-touch-icon" sizes="144x144" href="assets/img/favicons/apple-touch-icon-144x144.png">
         <link rel="apple-touch-icon" sizes="152x152" href="assets/img/favicons/apple-touch-icon-152x152.png">
         <link rel="apple-touch-icon" sizes="180x180" href="assets/img/favicons/apple-touch-icon-180x180.png">
-        <!-- END Icons -->
 
-        <!-- Stylesheets -->
-        <!-- Web fonts -->
         <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400italic,600,700%7COpen+Sans:300,400,400italic,600,700">
 
-        <!-- Page JS Plugins CSS -->
-        <link rel="stylesheet" href="assets/js/plugins/slick/slick.min.css">
-        <link rel="stylesheet" href="assets/js/plugins/slick/slick-theme.min.css">
-
         <!-- Bootstrap and OneUI CSS framework -->
-        
         <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+        <link rel="stylesheet" id="css-main" href="assets/css/oneui.css">
         
-        <link rel="stylesheet" id="css-main" href="assets/css/oneui_saga.css">
-        <link rel="stylesheet" href="./css/formacion.css">
-
         <link rel="stylesheet" href="libs/notify/animate.css">
         <style type="text/css">
+            .center-block {
+                float: none;
+              display: block;
+              margin-left: auto;
+              margin-right: auto;
+              text-align: center;
+            }
+            .element {
+              .center-block();
+            }
+            .degradeFondo{
+                /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#1e5799+0,207cca+40,207cca+42,207cca+50,2989d8+58,7db9e8+100 */
+                background: #1e5799; /* Old browsers */
+                background: -moz-linear-gradient(top, #1e5799 0%, #207cca 40%, #207cca 42%, #207cca 50%, #2989d8 58%, #7db9e8 100%); /* FF3.6-15 */
+                background: -webkit-linear-gradient(top, #1e5799 0%,#207cca 40%,#207cca 42%,#207cca 50%,#2989d8 58%,#7db9e8 100%); /* Chrome10-25,Safari5.1-6 */
+                background: linear-gradient(to bottom, #1e5799 0%,#207cca 40%,#207cca 42%,#207cca 50%,#2989d8 58%,#7db9e8 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+                filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#1e5799', endColorstr='#7db9e8',GradientType=0 ); /* IE6-9 */
+            }
+            html,body,.container
+            {
+                height:100%;
+            }
+            .container
+            {
+                display:table;
+                width: 100%;
+                margin-top: -25px;
+                padding: 5px 0 0 0; /*set left/right padding according to needs*/
+                -moz-box-sizing: border-box;
+                box-sizing: border-box;
+            }
+            .general
+            {
+                height: 8%;
+                /* background:#0b3c5d; */
+                /*background-image: url(resources/login.png);
+                background-repeat: repeat-x;*/
+                background-size: 100% 100%;
+                /*background-position-x: center;*/
+            }
+            .row
+            {
+                height: 20%;
+                display: table-row;
+            }
+            .colorgraphRojo{
+                height: 12px !important;
+                background: linear-gradient( red 0%, red 70%, yellow 70%, yellow 100%) !important;
+                border-top: red !important;
+                margin-top: -1px !important;
+            }
+            @media only screen and (min-height:1px) and (max-height: 570px) {
+                .img-responsive{
+                    max-width: 75%;
+                }
+                .container{
+                    margin-top: 0px;
+                }
+            }
+            @media only screen and (min-height:571px) and (max-height: 1000px) {
+                .img-responsive{
+                    max-width: 96%;
+                }
+            }
+            @media only screen and (min-height:1001px) and (max-height: 2048px) {
+                .img-responsive{
+                    max-width: 68%;
+                }
+            }
             .panel-body {
                 padding: 0px !important;
             }
@@ -59,31 +118,35 @@
             .panel-google-plus > .panel-heading {
                 border-radius: 2px;
             }
+            .content {
+                padding: 0px;
+            }
         </style>
+
         <script src="assets/js/core/jquery.min.js"></script>
         <script src="assets/js/core/bootstrap.min.js"></script>
         <script src="libs/notify/bootstrap-notify.min.js"></script>     
+        <script type="text/javascript" src="cordova.js"></script>
+        <script type="text/javascript" src="js/ini_cordova.js"></script>
         <!-- END Stylesheets -->
-    </head>
     <body>
         <!-- Page Container -->
         <div id="page-container" class="sidebar-l sidebar-o side-scroll header-navbar-fixed">
 
             <!-- Sidebar -->
-            <nav id="sidebar" style="background:#144061">
+            <nav id="sidebar">
                 <!-- Sidebar Scroll Container -->
                 <div id="sidebar-scroll">
                     <!-- Sidebar Content -->
                     <div class="sidebar-content">
                         <!-- Side Header -->
-                        <div class="side-header side-content bg-white-op" style="background:#e56949">
+                        <div class="side-header side-content bg-white-op" >
                             <!-- Layout API, functionality initialized in App() -> uiLayoutApi() -->
                             <button class="btn btn-link text-gray pull-right hidden-md hidden-lg" type="button" data-toggle="layout" data-action="sidebar_close">
                                 <i class="fa fa-times"></i>
                             </button>
                             <!-- Themes functionality initialized in App() -> uiHandleTheme() -->
-                            
-                            <a class="h5 text-white" href="index.html">
+                            <a class="h5 text-white" href="menu_principal.html">
                                 <img src="resources/cuncejapp-transparente.png" style="height:50px">
                             </a>
                         </div>
@@ -91,20 +154,22 @@
 
                         <!-- Side Content -->
                         <div class="side-content">
-                            <ul class="nav-main">
-                                <li><a class="active" href="menu_principal.html"><span class="sidebar-mini-hide">INICIO</span></a></li>
-                                <li><a href="menu_asesoria_enlinea.html"><span class="sidebar-mini-hide">ASESORÍA EN LINEA</span></a></li>
-                                <li><a href="menu_formacion.html"><span class="sidebar-mini-hide">FORMACIÓN</span></a></li>
-                                <li><a href="menu_banco_normativo.html"><span class="sidebar-mini-hide">BANCO NORMATIVO</span></a></li>
-                                <li><a href="menu_nuestros_servicios.html"><span class="sidebar-mini-hide">NUESTROS SERVICIOS</span></a></li>
-                                <li><a href="menu_directorio.html"><span class="sidebar-mini-hide">DIRECTORIO</span></a></li>
-                                <li><a href="menu_indicadores.html"><span class="sidebar-mini-hide">INDICADORES</span></a></li>
-                                <li><a href="menu_videotic.html"><span class="sidebar-mini-hide">VIDEOTIC</span></a></li>
-                                <li><a href="menu_noticias.html"><span class="sidebar-mini-hide">NOTICIAS</span></a></li>
-                                <li>
-                                    <a href="#" onclick="localStorage.clear();var isCordovaApp = !!window.cordova; console.log(isCordovaApp);if(isCordovaApp){window.open('login.html');}else{window.open('login.html','_self');};return false;"><span class="sidebar-mini-hide">SALIR</span></a>
-                                </li>
-                            </ul>
+                            <div class="side-content">
+                                <ul class="nav-main">
+                                    <li><a class="active" href="menu_principal.html"><span class="sidebar-mini-hide">INICIO</span></a></li>
+                                    <li><a href="menu_asesoria_enlinea.html"><span class="sidebar-mini-hide">ASESORÍA EN LINEA</span></a></li>
+                                    <li><a href="menu_formacion.html"><span class="sidebar-mini-hide">FORMACIÓN</span></a></li>
+                                    <li><a href="menu_banco_normativo.html"><span class="sidebar-mini-hide">BANCO NORMATIVO</span></a></li>
+                                    <li><a href="menu_nuestros_servicios.html"><span class="sidebar-mini-hide">NUESTROS SERVICIOS</span></a></li>
+                                    <li><a href="menu_directorio.html"><span class="sidebar-mini-hide">DIRECTORIO</span></a></li>
+                                    <li><a href="menu_indicadores.html"><span class="sidebar-mini-hide">INDICADORES</span></a></li>
+                                    <li><a href="menu_videotic.html"><span class="sidebar-mini-hide">VIDEOTIC</span></a></li>
+                                    <li><a href="menu_noticias.html"><span class="sidebar-mini-hide">NOTICIAS</span></a></li>
+                                    <li>
+                                        <a href="#" onclick="localStorage.clear();var isCordovaApp = !!window.cordova; console.log(isCordovaApp);if(isCordovaApp){window.open('login.html');}else{window.open('login.html','_self');};return false;"><span class="sidebar-mini-hide">SALIR</span></a>
+                                    </li>
+                                </ul>
+                            </div>
                         </div>
                         <!-- END Side Content -->
                     </div>
@@ -115,36 +180,31 @@
             <!-- END Sidebar -->
 
             <!-- Header -->
-            <header id="header-navbar" class="content-mini content-mini-full" style="background:#e56949">
+            <header id="header-navbar" class="content-mini content-mini-full" style="">
                 <ul class="nav-header pull-left">
                     <li class="hidden-md hidden-lg">
                         <!-- Layout API, functionality initialized in App() -> uiLayoutApi() -->
-                        <button class="btn btn-default" data-toggle="layout" data-action="sidebar_toggle" type="button" style="background:#d83022">
+                        <button class="btn btn-info" data-toggle="layout" data-action="sidebar_toggle" type="button" style="">
                             <i class="fa fa-navicon"></i>
                         </button>
                     </li>
                     <li class="hidden-md hidden-lg">
                         <div style="float:right;color:white">
-                            <img src="resources/cuncejapp-transparente.png" style="height:35px">    
+                            <img src="resources/cuncejapp-transparente.png" style="height:34px">
                         </div>
                     </li>
-                </ul>
-                <a href="menu_formacion.html" class="btn btn-info" role="button" style="background:#d83022;float: right;"><i class="fa fa-history" aria-hidden="true"></i></a>
+                </ul>                
+                <a href="menu_formacion.html" class="btn btn-info" role="button" style="float: right;"><i class="fa fa-history" aria-hidden="true"></i></a>
             </header>
             <!-- END Header -->
             <!-- Main Container -->
-            <div id="main-container">
-                <!-- Page Content -->
-                <div class="content" style="text-align: justify;">
-                        <img src="resources/top_cursos.png" style="width: 50%; display: block;margin: 0 auto;">
-                        <p align="center"><br>
-                            <button id="AbrirSitio" type="button" class="btn btn-primary">ESCUELA VIRTUAL CUNDINAMARCA 2036</button>
-                        </p>
-                        <div class="container lista" style="overflow-y: visible">
-                        </div>
-                    </div>
+            <div id="main-container" class="degradeFondo">
+                <hr class="colorgraphRojo">
+                <p align="center">
+                    <button id="AbrirSitio" type="button" class="btn btn-primary">ESCUELA VIRTUAL CUNDINAMARCA 2036</button>
+                </p>
+                <div class="container lista" style="overflow-y: visible">
                 </div>
-                  <!-- END Page Content -->
             </div>
             <!-- END Main Container -->
             <!-- END Footer -->
@@ -162,9 +222,6 @@
         <script src="assets/js/app.js"></script>
         <script src="js/valogin.js"></script>
         <script src="js/menu_formacion_cursos.js"></script>
-          <!--script src="./js/concejales.js"></script-->
 
-        <script type="text/javascript" src="cordova.js"></script>
-        <script type="text/javascript" src="js/ini_cordova.js"></script>
     </body>
 </html>

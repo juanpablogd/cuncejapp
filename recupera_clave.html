@@ -36,27 +36,179 @@
         <!-- Web fonts -->
         <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400italic,600,700%7COpen+Sans:300,400,400italic,600,700">
 
-        <!-- Page JS Plugins CSS -->
-        <link rel="stylesheet" href="assets/js/plugins/slick/slick.min.css">
-        <link rel="stylesheet" href="assets/js/plugins/slick/slick-theme.min.css">
-
         <!-- Bootstrap and OneUI CSS framework -->
         <!-- link rel="stylesheet" href="assets/css/bootstrap.min.css" -->
         <link rel="stylesheet" href="libs/bootstrap/css/bootstrap.min.css" >
         <link rel="stylesheet" href="libs/bootstrap/css/bootstrap-theme.min.css" >
-        <link rel="stylesheet" id="css-main" href="assets/css/oneui.css">
+        <!-- link rel="stylesheet" id="css-main" href="assets/css/oneui.css" -->
+        <link rel="stylesheet" href="libs/notify/animate.css">
+        <style type="text/css">
+            html,body,.container
+            {
+                height:100%;
+            }
+            .container
+            {
+                display:table;
+                width: 100%;
+                margin-top: -50px;
+                padding: 50px 0 0 0; /*set left/right padding according to needs*/
+                -moz-box-sizing: border-box;
+                box-sizing: border-box;
+            }
+            .general
+            {
+                height: 90%;
+                background-image: url(resources/recupera_contrasena.png);
+                background-repeat: repeat-x;
+                background-size: 100% 100%;
+                background-position-x: center;
+            }
+            .row
+            {
+                height: 100%;
+                display: table-row;
+            }
+            @media (min-width: 992px) {
+              .row .no-float {
+                  display: table-cell;
+                  float: none;
+              }
+            }
+            a img {
+                display : block;
+                margin : auto;
+            }
+            @media only screen and (min-height:60px) and (max-height: 630px) {
+                .topForm {
+                    top:23%;
+                }
+                .topIngreso {
+                    margin-top: -7%;
+                }
+                .topConsulta {
+                    top:23%;
+                }
+                .topRecuperar{
+                    margin-top: 5%;
+                }
+            }
+            @media only screen and (min-height:631px) and (max-height: 700px) {
+                .topForm {
+                    top:27%;
+                }
+                .topIngreso {
+                    top:27%;
+                }
+                .topConsulta {
+                    top:28%;
+                }
+                .topRecuperar{
+                    margin-top: 5%;
+                }
+            }
+            @media only screen and (min-height:701px) and (max-height: 740px) {
+                .topForm {
+                    top:30%;
+                }
+                .topIngreso {
+                    top:27%;
+                }
+                .topConsulta {
+                    top:33%;
+                }
+                .topRecuperar{
+                    margin-top: 5%;
+                }
+            }
+            @media only screen and (min-height:741px) and (max-height: 830px) {
+                .topForm {
+                    top:33%;
+                }
+                .topIngreso {
+                    margin-top: 6%;
+                }
+                .topConsulta {
+                    top:34%;
+                }
+                .topRecuperar{
+                    margin-top: 10%;
+                }
+            }
+            @media only screen and (min-height:831px) and (max-height: 1030px) {
+                .topForm {
+                    top:27%;
+                }
+                .topIngreso {
+                    margin-top: 11%;
+                }
+                .topConsulta {
+                    top:35%;
+                }
+                .topRecuperar{
+                    margin-top: 10%;
+                }
+            }
+            @media only screen and (min-height:1031px) {
+                .topForm {
+                    top:27%;
+                }
+                .topIngreso {
+                    margin-top: 17%;
+                }
+                .topConsulta {
+                    top:35%;
+                }
+                .topRecuperar{
+                    margin-top: 10%;
+                }
+            }
 
-		<link rel="stylesheet" href="libs/notify/animate.css">
+        </style>
         <script src="libs/jquery.min.js"></script>
         <!-- script src="assets/js/core/bootstrap.min.js"></script -->
         <script src="libs/bootstrap/js/bootstrap.min.js"></script>
-        <script src="libs/notify/bootstrap-notify.min.js"></script>		
-		<script type="text/javascript" src="cordova.js"></script>
-		<script type="text/javascript" src="js/ini_cordova.js"></script>
+        <script src="libs/notify/bootstrap-notify.min.js"></script>     
+        <script type="text/javascript" src="cordova.js"></script>
+        <script type="text/javascript" src="js/ini_cordova.js"></script>
 
     </head>
+
+    <body> 
+        <div class="general"><br>
+            <div class="col-md-12 topForm">
+                <section class="login-form">
+                    <p><a href="recupera_clave.html" style="color: #337ab7; font-size: 12px; font-style: italic;">Digite su Email</a></p>
+                    <input type="email" id="usr" name="usr" placeholder="usuario" required class="form-control input-lg" value="" /><br><br><br>
+                    <button type="submit" id="enviar" name="enviar" class="btn btn-md btn-info btn-block">Enviar</button>
+                </section>
+                <p class="topRecuperar"><a href="recupera_clave.html" style="color: white; font-size: 16px; font-style: italic;"><u>Recuperar contraseña</u> </a></p>
+            </div>
+            <div class="col-md-12 topConsulta">
+                <a href="login.html" style="color: white; font-size: 16px; font-style: italic;">
+                    <u>Iniciar Sesión</u>
+                </a>
+            </div>
+        </div>
+        <div class="container">
+            <!-- header id="principal"></header -->
+            <div class="row">
+                <div class="col-xs-12 col-md-12 no-float" style="color: #337ab7;font-size: 12px;font-style: italic;">
+                    Contácto:<br>
+                    contactenos.gobierno@cundinamarca.gov.co<br>
+                    Tel: <a href="tel:0317446042">7446042</a>  - <a href="tel:3212480387">3212480387</a> 
+                </div>
+            </div>
+        </div>
+        <script src="./js/recupera_clave.js"></script>
+    </body>
+</html>
+
+
+
+<!-- DOCTYPE html>
     <body style="background: url(resources/CUNSEAPP-01.png) no-repeat; width: 100%; height: 150px; background-size: 100%;">
-        <!-- Main Container -->
+
         <div class="container"><br>
             <img src="resources/cuncejapp-transparente.png" style="margin:auto;display: flex;justify-content: center;" alt="" /><br>
             <div style="color: white; font-size: 12px;text-align: center;">
@@ -71,25 +223,9 @@
                 </section></br>
                 <p><a href="login.html" style="color: white; font-size: 16px; font-style: italic;"><u>Iniciar Sesión</u> </a></p>
             </div>
-            <div class="col-md-12" style="color: white; font-size: 12px; font-style: italic;"><br><br>
-                Contácto:<br>
-                contactenos.gobierno@cundinamarca.gov.co<br>
-                Tel: <a href="tel:0317446042">7446042</a>  - <a href="tel:3212480387">3212480387</a>  
-            </div>
+
           </div>
  
         </div>
-         <!-- Page Content -->
 
-        <script src="assets/js/core/jquery.slimscroll.min.js"></script>
-        <script src="assets/js/core/jquery.scrollLock.min.js"></script>
-        <script src="assets/js/core/jquery.appear.min.js"></script>
-        <script src="assets/js/core/jquery.countTo.min.js"></script>
-        <script src="assets/js/core/jquery.placeholder.min.js"></script>
-        <script src="assets/js/core/js.cookie.min.js"></script>
-        <script src="assets/js/app.js"></script>
-
-        <script src="./js/recupera_clave.js"></script>
-
-    </body>
-</html>
+</html -->

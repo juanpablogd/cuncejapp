@@ -1,11 +1,13 @@
 function irCurso(id){
     localStorage.setItem("tmp_curso", id);
     console.log(id);
-    setTimeout(function(){
-        window.open(
-          'menu_formacion_detalle.html'
-        ); 
-    }, 50);
+    var isCordovaApp = !!window.cordova; console.log(isCordovaApp);
+    if(isCordovaApp){
+        setTimeout(function(){ window.open('menu_formacion_detalle.html'); }, 50);          
+    }else{
+        window.open('menu_formacion_detalle.html','_self');
+        setTimeout(function(){ window.open('menu_formacion_detalle.html','_self'); }, 50);
+    }
 }
 
 $(document).ready(function(){
@@ -23,14 +25,14 @@ function cargaCursos(){
             '<div class="row" onclick="irCurso('+arr[i].id+')">'+
                 '<div class="col-xs-12 col-sm-11 col-lg-6">'+
                     '<div class="[ panel panel-default ] panel-google-plus">'+
-                        '<div class="panel-heading">'+
+                        '<div class="panel-heading" style="background: #1e5da1;color: white;">'+
                             '<span class="glyphicon glyphicon glyphicon-book  c-info" data-toggle="tooltip" title="CuncejApp"></span>'+
                             '<span class="lbTitulo" style="font-size: inherit;"> '+arr[i].institucion+'</span><br/>'+
                         '</div>'+
-                        '<div class="panel-body" style="background-color: #053d59;">'+
+                        '<div class="panel-body">'+
                             '<div class="row"><br>'+
-                              '<div class="col-xs-8 col-md-8" style="color: white;left: 10px;"><p style="margin-bottom: 0px;">'+arr[i].titulo+'</p></div>'+
-                              '<div class="col-xs-4 col-md-4"><img src="resources/cursos/cursoFecha.png" style="width: 100%;"><div class="center" style="position: absolute;top: 32%;left: 20%;color: lightgoldenrodyellow;">'+arr[i].fecha_inicio+'</div></img></div>'+
+                              '<div class="col-xs-8 col-md-8" style="color: grey;left: 10px;"><p style="margin-bottom: 0px;">'+arr[i].titulo+'</p></div>'+
+                              '<div class="col-xs-4 col-md-4"><img src="resources/cursos/cursoFecha.png" style="width: 100%;"><div class="center" style="position: absolute;top: 32%;left: 20%;color: lightgoldenrodyellow;font-size: 13px;">'+arr[i].fecha_inicio+'</div></img></div>'+
                             '</div>'+
                             '<div class="row">'+
                                 '<div class="col-xs-4 col-xs-offset-4"><img src="resources/cursos/verMas.png" style="width: 100%;"/></div>'+
