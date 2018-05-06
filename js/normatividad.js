@@ -100,7 +100,7 @@ $(function () {
 				    '<div class="row">'+
 			        '<div class="col-xs-12 col-sm-11 col-lg-6 bloque">'+
 			            '<div class="[ panel panel-default ] panel-google-plus">'+
-			                '<div class="panel-heading">'+
+			                '<div class="panel-heading" style="color:#5c90d2">'+
 			                	'<span class="fa fa-gavel "></span> '+
 			                	value.num+
 			    			    

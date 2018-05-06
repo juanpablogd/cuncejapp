@@ -18,12 +18,12 @@ function modalData(id){
 			var html_telefono='';
 			if (value.telefono != null && value.telefono !== undefined) {
 				if (value.telefono2 != null && value.telefono2 !== undefined) {
-					html_telefono='<h5><span class="glyphicon glyphicon-earphone text-muted "> <a href="tel:'+indicativo(value.telefono)+'">'+value.telefono+'</a> - <a href="tel:'+indicativo(value.telefono2)+'">'+value.telefono2+'</a> </span></h5>';
+					html_telefono='<h5><span class="glyphicon glyphicon-earphone text-muted " style="margin-left: 12px;"> <a href="tel:'+indicativo(value.telefono)+'">'+value.telefono+'</a> - <a href="tel:'+indicativo(value.telefono2)+'">'+value.telefono2+'</a> </span></h5>';
 				}else{
-					html_telefono='<h5><span class="glyphicon glyphicon-earphone text-muted"> <a href="tel:'+indicativo(value.telefono)+'">'+value.telefono+'</a> </span></h5>';
+					html_telefono='<h5><span class="glyphicon glyphicon-earphone text-muted" style="margin-left: 12px;"> <a href="tel:'+indicativo(value.telefono)+'">'+value.telefono+'</a> </span></h5>';
 				}	
 			}else{
-				html_telefono='<h5><span class="glyphicon glyphicon-earphone text-muted"> No registra </span></h5>';
+				html_telefono='<h5><span class="glyphicon glyphicon-earphone text-muted" style="margin-left: 12px;"> No registra </span></h5>';
 			}
 			var dialog = new BootstrapDialog({
 		        message: function(dialogRef){
@@ -55,7 +55,7 @@ function modalData(id){
 													'</li>'+
 													'<li>'+
 														'<a >'+
-														'<span class="glyphicon glyphicon-envelope "></span> '+
+														'<span class="glyphicon glyphicon-envelope " style="margin-left: 12px;"></span> '+
 														value.correo+ '</a>'+
 													'</li>'+
 												'</ul>'+
@@ -104,12 +104,12 @@ $(function () {
 				var html_telefono='';
 				if (value.telefono != null && value.telefono !== undefined) {
 					if (value.telefono2 != null && value.telefono2 !== undefined) {
-						html_telefono='<h5><span class="glyphicon glyphicon-earphone text-muted "> <a href="tel:'+indicativo(value.telefono)+'">'+value.telefono+'</a> - <a href="tel:'+indicativo(value.telefono2)+'">'+value.telefono2+'</a> </span></h5>';
+						html_telefono='<h5><span class="glyphicon glyphicon-earphone text-muted " style="margin-left: 12px;"> <a href="tel:'+indicativo(value.telefono)+'">'+value.telefono+'</a> - <a href="tel:'+indicativo(value.telefono2)+'">'+value.telefono2+'</a> </span></h5>';
 					}else{
-						html_telefono='<h5><span class="glyphicon glyphicon-earphone text-muted"> <a href="tel:'+indicativo(value.telefono)+'">'+value.telefono+'</a> </span></h5>';
+						html_telefono='<h5><span class="glyphicon glyphicon-earphone text-muted" style="margin-left: 12px;"> <a href="tel:'+indicativo(value.telefono)+'">'+value.telefono+'</a> </span></h5>';
 					}	
 				}else{
-					html_telefono='<h5><span class="glyphicon glyphicon-earphone text-muted"> No registra </span></h5>';
+					html_telefono='<h5><span class="glyphicon glyphicon-earphone text-muted" style="margin-left: 12px;"> No registra </span></h5>';
 				}
 				$(".lista").append(
 			    '<div class="row">'+
@@ -124,7 +124,7 @@ $(function () {
 		                '</div>'+
 		                '<div class="panel-body">'+
 		                    html_telefono+
-		                    '<h5><span class="glyphicon glyphicon-envelope text-muted "> <a href="mailto:'+value.correo+'"> '+value.correo+'</a></span></h5>'+
+		                    '<h5><span class="glyphicon glyphicon-envelope text-muted " style="margin-left: 12px;"> <a href="mailto:'+value.correo+'"> '+value.correo+'</a></span></h5>'+
 		                '</div>'+
 		            '</div>'+
 		        '</div>'+

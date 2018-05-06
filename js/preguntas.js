@@ -77,13 +77,14 @@ $(function () {
 				    '<div class="row">'+
 			        '<div class="col-xs-12 col-sm-11 col-lg-6 bloque">'+
 			            '<div class="[ panel panel-default ] panel-google-plus">'+
-			                '<div class="panel-heading">'+
+			                '<div class="panel-heading" style="color:#5c90d2">'+
 			                	'<span class="glyphicon glyphicon-question-sign "></span> '+
 			                	value.pregunta+
 			    			    
 			                '</div>'+
 			                '<div class="panel-body alineacion">'+
-			                	'<p><span class="glyphicon glyphicon-info-sign "></span> '+
+			                	'<p>'+
+//			                	'<span class="glyphicon glyphicon-info-sign "></span> '+
 			                	value.respuesta+
 			                	'</p><button type="button"  onclick="modalData('+value.id+')" class=" pull-right btn btn-primary btn-xs"><span class="glyphicon glyphicon-share-alt "></span> VER MAS</button>'+
 			                '</div>'+

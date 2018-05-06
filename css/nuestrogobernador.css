@@ -68,11 +68,14 @@ opacity:0.9;
 }
 
 .bs-callout-danger {
-    border-left-color: #d9534f;
+    /*  border-left-color: #d9534f; */
+    border-left-color: red;
+    background: white;
 }
 
 .bs-callout-danger h4{
-    color: #d9534f;
+    /*color: #d9534f;*/
+    color: #5c90d2;
 }
 
 .resume .list-group-item:first-child, .resume .list-group-item:last-child{

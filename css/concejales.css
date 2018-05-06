@@ -192,10 +192,10 @@
     border-color: rgb(0, 0, 0);    
 }
 
-#container_busqueda{
+/*#container_busqueda{
     margin-top:2px; 
     margin-bottom: 2px;
-}
+}   */
 .stylish-input-group .input-group-addon{
     background: white !important; 
 }

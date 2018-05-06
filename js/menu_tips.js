@@ -25,7 +25,7 @@ function cargaCursos(){
                 '<div class="row">'+
                 '<div class="[ col-xs-12 col-sm-offset-1 col-sm-12 ]">'+
                     '<div class="[ panel panel-default ] panel-google-plus">'+
-                        '<div class="panel-heading">'+
+                        '<div class="panel-heading" style="color:#5c90d2">'+
                             '<span class="glyphicon glyphicon glyphicon-book  c-info" data-toggle="tooltip" title="CuncejApp"></span>'+
                             '<span class="lbTitulo" style="font-size: small;"> '+arr[i].titulo+'</span><br/>'+
                         '</div>'+

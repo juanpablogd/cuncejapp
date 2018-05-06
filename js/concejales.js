@@ -42,15 +42,14 @@ $(function () {
 			$(".lista").append('<center><h6 class="text-muted c-info"> '+longitud+' resultados .<h6><center>');
 			$.each(data, function( index, value ) {
 				var html_telefono='';
-				var html_telefono='';
 				if (value.telefono != null && value.telefono !== undefined) {
 					if (value.telefono2 != null && value.telefono2 !== undefined) {
-						html_telefono='<h5><span class="glyphicon glyphicon-earphone text-muted "> <a href="tel:'+indicativo(value.telefono)+'">'+value.telefono+'</a> - <a href="tel:'+indicativo(value.telefono2)+'">'+value.telefono2+'</a> </span></h5>';
+						html_telefono='<h5><span class="glyphicon glyphicon-earphone text-muted " style="margin-left: 12px;"> <a href="tel:'+indicativo(value.telefono)+'">'+value.telefono+'</a> - <a href="tel:'+indicativo(value.telefono2)+'">'+value.telefono2+'</a> </span></h5>';
 					}else{
-						html_telefono='<h5><span class="glyphicon glyphicon-earphone text-muted"> <a href="tel:'+indicativo(value.telefono)+'">'+value.telefono+'</a> </span></h5>';
+						html_telefono='<h5><span class="glyphicon glyphicon-earphone text-muted" style="margin-left: 12px;"> <a href="tel:'+indicativo(value.telefono)+'">'+value.telefono+'</a> </span></h5>';
 					}	
 				}else{
-					html_telefono='<h5><span class="glyphicon glyphicon-earphone text-muted"> No registra </span></h5>';
+					html_telefono='<h5><span class="glyphicon glyphicon-earphone text-muted" style="margin-left: 12px;"> No registra </span></h5>';
 				}
 				if (value.nombre != null && value.nombre !== undefined) {
 					html_nombre='<h3>'+value.nombre+'</h3>';
@@ -59,22 +58,21 @@ $(function () {
 				}
 				
 				$(".lista").append(
-					
-			    '<div class="row">'+
-		        '<div class="[ col-xs-12 col-sm-offset-1 col-sm-12 ]">'+
-		            '<div class="[ panel panel-default ] panel-google-plus">'+
-		                '<div class="panel-heading">'+
-		                    html_nombre+
-		                    '<h5><span class="glyphicon glyphicon-map-marker text-muted c-info"></span><span>  '+value.mun+'</span> </h5>'+
-//		                    '<h5><span class="glyphicon glyphicon-bookmark text-muted c-info"></span><span>  '+value.cargo+'</span> </h5>'+
-		                '</div>'+
-		                '<div class="panel-body">'+
-		                    html_telefono+
-		                    '<h5><span class="glyphicon glyphicon-envelope text-muted "> <a href="mailto:'+value.correo+'"> '+value.correo+'</a></span></h5>'+
-		                '</div>'+
-		            '</div>'+
-		        '</div>'+
-		    '</div>')
+				    '<div class="row">'+
+			        '<div class="[ col-sm-12 col-sm-offset-1 col-sm-12 ]">'+
+			            '<div class="[ panel panel-default ] panel-google-plus">'+
+			                '<div class="panel-heading">'+
+			                    html_nombre+
+			                    '<h5><span class="glyphicon glyphicon-map-marker text-muted c-info"></span><span>  '+value.mun+'</span> </h5>'+
+	//		                    '<h5><span class="glyphicon glyphicon-bookmark text-muted c-info"></span><span>  '+value.cargo+'</span> </h5>'+
+			                '</div>'+
+			                '<div class="panel-body">'+
+			                    html_telefono+
+			                    '<h5><span class="glyphicon glyphicon-envelope text-muted " style="margin-left: 12px;"> <a href="mailto:'+value.correo+'"> '+value.correo+'</a></span></h5>'+
+			                '</div>'+
+			            '</div>'+
+			        '</div>'+
+			    '</div>');
 			});
 			if(longitud>99)
 			$(".lista").append('<h6 class="text-muted c-info">Muestra  los primeros 50 resultados, por favor realice una busqueda más especifica.</h6>')
