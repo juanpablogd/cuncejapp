@@ -11,19 +11,19 @@ function cargaChats(){
         for (var i = 1; i < (registros+1); i++){    console.log(arr[i]);
             $(".lista").append(
             '<div class="row" style="font-size: 12px;">'+
-                '<div class="col-xs-12 col-sm-11 col-lg-6">'+
+                '<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">'+
                     '<div class="[ panel panel-default ] panel-google-plus">'+
                         '<div class="panel-heading" style="background: #1e5da1;color: white;">'+
-                            '<span class="glyphicon glyphicon glyphicon-book  c-info" data-toggle="tooltip" title="CuncejApp"></span>'+
-                            '<span class="lbTitulo" style="font-size: inherit;"> '+arr[i].nombre+'</span><br/>'+
+                            '<span class="glyphicon glyphicon glyphicon-envelope  c-info" data-toggle="tooltip" title="CuncejApp"></span>'+
+                            '<span class="lbTitulo" style="font-size: initial;"> '+arr[i].nombre+'</span>'+
                         '</div>'+
                         '<div class="panel-body">'+
-                            '<div class="row">'+
+                            '<div class="row"><br>'+
                                 '<a href="'+arr[i].url+'">'+
-                                    '<div class="col-xs-4 col-md-4"><img src="resources/sms_64x64.png" style="margin-top: 7px;width: 100%;"></img></div>'+
-                                    '<div class="col-xs-8 col-md-8" style="color: grey;left: 10px;"><p style="margin-bottom: 0px;"><b>'+arr[i].descripcion+'</b></p></div>'+
+                                    '<div class="col-xs-3 col-md-3"><img src="resources/sms_64x64.png" style="margin-top: 7px;width: 66px;height: 66px;"></img></div>'+
+                                    '<div class="col-xs-9 col-md-9" style="color: grey;">'+arr[i].descripcion+'</div>'+
                                 '</a>'+
-                            '</div>'+
+                            '</div><br>'+
                         '</div>'+
                     '</div>'+
                 '</div>'+

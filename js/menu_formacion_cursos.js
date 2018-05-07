@@ -51,7 +51,7 @@ function cargaCursos(){
                         '</div>'+
                         '<div class="panel-body">'+
                             '<div class="row"><br>'+
-                            '<div class="col-xs-4 col-md-4"><img src="resources/cursos/icoCursos.png" style="width: 100%;"></img></div>'+
+                              '<div class="col-xs-4 col-md-4"><img src="resources/cursos/icoCursos.png" style="width: 100%;"></img></div>'+
                               '<div class="col-xs-8 col-md-8" style="color: grey;left: 10px;"><p style="margin-bottom: 0px;"><b>'+arr[i].titulo+'</b></p></div>'+
                               '<div class="col-xs-8 col-md-8" style="color: grey;left: 10px;"><p style="margin-bottom: 0px;">Limite de inscripción: '+arr[i].fecha_inscripcion+'. Fecha inicio: '+arr[i].fecha_inicio+' </p></div>'+
                             '</div>'+

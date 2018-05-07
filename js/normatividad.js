@@ -52,7 +52,7 @@ function modalData(id){
 		     });
 		     dialog.realize();
 		     dialog.getModalHeader().hide();
-		      dialog.open();
+		     dialog.open();
 		});
 	 //BootstrapDialog.alert(id);
 	 	

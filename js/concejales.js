@@ -36,17 +36,20 @@ $(function () {
 			$(".lista").empty();
 			var longitud=Object.keys(data).length;
 			console.log(longitud)
-			if(longitud>99)
-			$(".lista").append('<center><h6 class="text-muted c-info"> Más de '+longitud+' resultados.<h6><center>');
-			else
-			$(".lista").append('<center><h6 class="text-muted c-info"> '+longitud+' resultados .<h6><center>');
+			
+			if(longitud>99) $(".lista").append('<center><h6 class="text-muted c-info"> Más de '+longitud+' resultados.<h6><center>');
+			else $(".lista").append('<center><h6 class="text-muted c-info"> '+longitud+' resultados .<h6><center>');
+				
+			var obj = JSON.parse(localStorage.getItem("usuario"));	console.log(obj);
+			var txtWhatsapp = "Amigo concejal, te habla "+obj.nombres+" "+obj.apellidos+", concejal del municipio "+obj.municipio;
+
 			$.each(data, function( index, value ) {
 				var html_telefono='';
 				if (value.telefono != null && value.telefono !== undefined) {
 					if (value.telefono2 != null && value.telefono2 !== undefined) {
 						html_telefono='<h5><span class="glyphicon glyphicon-earphone text-muted " style="margin-left: 12px;"> <a href="tel:'+indicativo(value.telefono)+'">'+value.telefono+'</a> - <a href="tel:'+indicativo(value.telefono2)+'">'+value.telefono2+'</a></span></h5>';
 					}else{
-						html_telefono='<h5><span class="glyphicon glyphicon-earphone text-muted" style="margin-left: 12px;"> <a href="tel:'+indicativo(value.telefono)+'">'+value.telefono+'</a> </span>&nbsp;<a href="whatsapp://send?text=Amigo concejal&phone=+57'+value.telefono+'&abid=+57'+value.telefono+'"><img border="0" alt="W3Schools" src="resources/sms_64x64.png" width="16" height="16"></a></h5>';
+						html_telefono='<h5><span class="glyphicon glyphicon-earphone text-muted" style="margin-left: 12px;"> <a href="tel:'+indicativo(value.telefono)+'">'+value.telefono+'</a> </span>&nbsp;<a href="whatsapp://send?text='+txtWhatsapp+'&phone=+57'+value.telefono+'&abid=+57'+value.telefono+'"><img border="0" alt="W3Schools" src="resources/sms_64x64.png" width="16" height="16"></a></h5>';
 					}	
 				}else{
 					html_telefono='<h5><span class="glyphicon glyphicon-earphone text-muted" style="margin-left: 12px;"> No registra </span></h5>';
