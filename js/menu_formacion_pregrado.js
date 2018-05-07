@@ -1,7 +1,6 @@
 function irCurso(id){
     localStorage.setItem("tmp_curso", id);
     console.log(id);
-
     var isCordovaApp = !!window.cordova; console.log(isCordovaApp);
     if(isCordovaApp){
         setTimeout(function(){ window.open('menu_formacion_detalle.html'); }, 50);          
@@ -51,7 +50,7 @@ function cargaCursos(){
                         '</div>'+
                         '<div class="panel-body">'+
                             '<div class="row"><br>'+
-                            '<div class="col-xs-4 col-md-4"><img src="resources/cursos/icoCursos.png" style="width: 100%;"></img></div>'+
+                            '<div class="col-xs-4 col-md-4"><img src="resources/CUNSEAPP-10.png" style="width: 100%;"></img></div>'+
                               '<div class="col-xs-8 col-md-8" style="color: grey;left: 10px;"><p style="margin-bottom: 0px;"><b>'+arr[i].titulo+'</b></p></div>'+
                               '<div class="col-xs-8 col-md-8" style="color: grey;left: 10px;"><p style="margin-bottom: 0px;">Limite de inscripción: '+arr[i].fecha_inscripcion+'. Fecha inicio: '+arr[i].fecha_inicio+' </p></div>'+
                             '</div>'+
@@ -69,9 +68,9 @@ function cargaCursos(){
 $("#AbrirSitio").click(function(){
     var isCordovaApp = !!window.cordova; console.log(isCordovaApp);
     if(isCordovaApp){
-        var ref = cordova.InAppBrowser.open('http://aulavirtual.cundinamarca.gov.co/aulavirtual32/moodle/', '_self', 'location=yes');
+        var ref = cordova.InAppBrowser.open('http://colegiovirtualmoderno.edu.co/ava/login/index.php', '_system', 'location=no');
     }else{
-        window.open('http://aulavirtual.cundinamarca.gov.co/aulavirtual32/moodle/');
+        window.open('http://colegiovirtualmoderno.edu.co/ava/login/index.php');
     }
 });
 
@@ -80,7 +79,7 @@ setTimeout(function(){
     var parametros = new Object();  //parametros['app'] = 'cuncejapp';
     $.ajax({
         data:  parametros,
-        url:'http://saga.cundinamarca.gov.co/apps/cuncejapp/servicios/GetCursos.php?tipo=cursoGob&tipo2=cursoESAP',
+        url:'http://saga.cundinamarca.gov.co/apps/cuncejapp/servicios/GetCursos.php?tipo=pregradoESAP',
         type:  'post',
         async: false,       //timeout: 30000,
         success: function(responsef){ 

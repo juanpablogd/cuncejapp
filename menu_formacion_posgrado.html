@@ -1,6 +1,5 @@
 <!DOCTYPE html>
-<!--[if IE 9]>         <html class="ie9 no-focus" lang="en"> <![endif]-->
-<!--[if gt IE 9]><!--> <html class="no-focus" lang="en"> <!--<![endif]-->
+<html class="no-focus" lang="es">
     <head>
         <meta charset="utf-8">
 
@@ -108,6 +107,19 @@
                     max-width: 68%;
                 }
             }
+            .panel-body {
+                padding: 0px !important;
+            }
+            .panel-google-plus {
+                border-radius: 2px;
+                border: 1px solid #0a648c;
+            }
+            .panel-google-plus > .panel-heading {
+                border-radius: 2px;
+            }
+            .content {
+                padding: 0px;
+            }
 
         </style>
 
@@ -121,6 +133,7 @@
     <body>
         <!-- Page Container -->
         <div id="page-container" class="sidebar-l sidebar-o side-scroll header-navbar-fixed">
+
             <!-- Sidebar -->
             <nav id="sidebar">
                 <!-- Sidebar Scroll Container -->
@@ -182,65 +195,33 @@
                         </div>
                     </li>
                 </ul>                
-                <a href="menu_principal.html" class="btn btn-info" role="button" style="float: right;"><i class="fa fa-home" aria-hidden="true"></i></a>
+                <a href="menu_formacion.html" class="btn btn-info" role="button" style="float: right;"><i class="fa fa-history" aria-hidden="true"></i></a>
             </header>
             <!-- END Header -->
-
             <!-- Main Container -->
-            <main id="main-container" class="degradeFondo" >
-                <hr class="colorgraphRojo"></br>
-                <div class="row">
-                        <div class="col-md-1 col-xs-1">&nbsp;</div>
-                        <div class="col-md-5 col-xs-5">
-                            <div class="center-block">
-                                <a id="menu_formacion_formal" href="menu_formacion_formal.html"><img class="img-responsive center-block" alt="Responsive image" src="resources/formacionFormal.png" ></a>
-                                <label style="color:white;font-weight: 400">Haga su Bachillerato</label>
-                            </div>
-                        </div>
-                        <div class="col-md-5 col-xs-5">
-                            <div class="center-block">
-                                <a id ="menu_formacion_cursos" href ="menu_formacion_cursos.html" ><img class="img-responsive center-block" alt="Responsive image" src="resources/escuelaVirtual.png" >
-                                </a>
-                                <label style="color:white;font-weight: 400">Escuela virtual Cundinamarca 2036</label>
-                            </div>
-                        </div>
-                        <div class="col-md-1 col-xs-1">&nbsp;</div>
+            <div id="main-container" class="degradeFondo">
+                <hr class="colorgraphRojo">
+                <!-- p align="center"> <button id="AbrirSitio" type="button" class="btn btn-primary">COLEGIO VIRTUAL MODERNO</button></p -->
+                <div class="container lista" style="overflow-y: visible">
                 </div>
-                <div class="row">
-                        <div class="col-md-1 col-xs-1">&nbsp;</div>
-                        <div class="col-md-5 col-xs-5">
-                            <div class="center-block">
-                                <a id="menu_formacion_pregrado" href="menu_formacion_pregrado.html"><img class="img-responsive center-block" alt="Responsive image" src="resources/pregradoESAP.png" ></a>
-                                <label style="color:white;font-weight: 400">Pregrado ESAP</label>
-                            </div>
-                        </div>
-                        <div class="col-md-5 col-xs-5">
-                            <div class="center-block">
-                                <a id ="menu_formacion_posgrado" href ="menu_formacion_posgrado.html" ><img class="img-responsive center-block" alt="Responsive image" src="resources/posgradoESAP.png" >
-                                </a>
-                                <label style="color:white;font-weight: 400">Postgrado ESAP</label>
-                            </div>
-                        </div>
-                        <div class="col-md-1 col-xs-1">&nbsp;</div>
-                </div>
-                <!-- END Page Content -->
-            </main>
+            </div>
             <!-- END Main Container -->
+
+            <!-- END Footer -->
         </div>
         <!-- END Page Container -->
-        <div class="footer" style="bottom: -12px;">
-          <p style="text-align:center"><img src="resources/imgPie.png" style="width:100%;"></p>
-        </div>
+
         <!-- OneUI Core JS: jQuery, Bootstrap, slimScroll, scrollLock, Appear, CountTo, Placeholder, Cookie and App.js -->
         <script src="assets/js/core/jquery.slimscroll.min.js"></script>
         <script src="assets/js/core/jquery.scrollLock.min.js"></script>
         <script src="assets/js/core/jquery.appear.min.js"></script>
         <script src="assets/js/core/jquery.countTo.min.js"></script>
         <script src="assets/js/core/jquery.placeholder.min.js"></script>
-        <script src="libs/moment/moment-with-locales.min.js"></script>
         <script src="assets/js/core/js.cookie.min.js"></script>
-        <script src="js/menu_principal.js"></script>
+        <script src="libs/moment/moment-with-locales.min.js"></script>
         <script src="assets/js/app.js"></script>
+        <script src="js/valogin.js"></script>
+        <script src="js/menu_formacion_posgrado.js"></script>
 
     </body>
 </html>

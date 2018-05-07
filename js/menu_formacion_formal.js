@@ -21,8 +21,27 @@ function cargaCursos(){
         $( ".lista" ).html('<br>');
         for (var i = 1; i < (registros+1); i++){
             var htmlItem = '';  console.log(arr[i]);
+            var htmlInscribirse = '';
+            var fInicio = moment(arr[i].fecha_inicio+" 23:59:59", 'YYYY-MM-DD HH:mm:ss').toDate();
+            var fLimite = moment(arr[i].fecha_inscripcion+" 23:59:59", 'YYYY-MM-DD HH:mm:ss').toDate();
+            var fActual = moment(); console.log(fLimite);   //console.log(fActual);
+            var enCLick = "";
+            if(fActual >= fLimite || fActual >= fInicio){
+                htmlInscribirse = '<div class="col-xs-12" style="color: red;">Cerrado!! Inscritos: '+arr[i].inscritos+'</div><br>';
+            }else{
+                if(parseInt(arr[i].inscritos) >= parseInt(arr[i].limite_cupos)){
+                    htmlInscribirse = '<div class="col-xs-12" style="color: red;">Agotado!! Inscritos: '+arr[i].inscritos+'</div><br>';
+                }else{
+                    htmlInscribirse = '<div class="col-xs-12" style="color: green;">Inscritos: '+arr[i].inscritos+' - Cupos Disponibles: '+(parseInt(arr[i].limite_cupos)-parseInt(arr[i].inscritos))+'</div>'+
+                                    '<div class="col-xs-4 col-xs-offset-4"><img src="resources/cursos/verMas.png" style="width: 100%;"/></div>';
+                    enCLick = 'irCurso('+arr[i].id+')';
+                }
+            }
+            if(arr[i].fecha_inscripcion == null) arr[i].fecha_inscripcion = "NA";
+            if(arr[i].fecha_inicio == null) arr[i].fecha_inicio = "NA";
+            
             $(".lista").append(
-            '<div class="row" onclick="irCurso('+arr[i].id+')">'+
+            '<div class="row" onclick="'+enCLick+'" style="font-size: 12px;">'+
                 '<div class="col-xs-12 col-sm-11 col-lg-6">'+
                     '<div class="[ panel panel-default ] panel-google-plus">'+
                         '<div class="panel-heading" style="background: #1e5da1;color: white;">'+
@@ -31,11 +50,12 @@ function cargaCursos(){
                         '</div>'+
                         '<div class="panel-body">'+
                             '<div class="row"><br>'+
-                              '<div class="col-xs-8 col-md-8" style="color: grey;left: 10px;"><p style="margin-bottom: 0px;">'+arr[i].titulo+'</p></div>'+
-                              '<div class="col-xs-4 col-md-4"><img src="resources/cursos/cursoFecha.png" style="width: 100%;"><div class="center" style="position: absolute;top: 32%;left: 20%;color: lightgoldenrodyellow;font-size: 13px;">'+arr[i].fecha_inicio+'</div></img></div>'+
+                            '<div class="col-xs-4 col-md-4"><img src="resources/CUNSEAPP-10.png" style="width: 100%;"></img></div>'+
+                              '<div class="col-xs-8 col-md-8" style="color: grey;left: 10px;"><p style="margin-bottom: 0px;"><b>'+arr[i].titulo+'</b></p></div>'+
+                              '<div class="col-xs-8 col-md-8" style="color: grey;left: 10px;"><p style="margin-bottom: 0px;">Limite de inscripción: '+arr[i].fecha_inscripcion+'. Fecha inicio: '+arr[i].fecha_inicio+' </p></div>'+
                             '</div>'+
                             '<div class="row">'+
-                                '<div class="col-xs-4 col-xs-offset-4"><img src="resources/cursos/verMas.png" style="width: 100%;"/></div>'+
+                                htmlInscribirse+
                             '</div>'+
                         '</div>'+
                     '</div>'+

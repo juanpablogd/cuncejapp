@@ -34,7 +34,7 @@ window.onload = function() {
 					$("#cargando").hide();
 					$('#btn_inscribirse').show();
 				  	if($.isNumeric(result)){
-				  		alerta("Se ha inscrito con el codigo: "+ result,function() {
+				  		alerta("Señor Concejal su preinscripción ha sido exitosa, nos comunicaremos en las siguientes 24 horas para brindar asistencia y orientación para el proceso de matrícula.",function() {
 		                    var isCordovaApp = !!window.cordova; console.log(isCordovaApp);
 	                        if(isCordovaApp){
 	                            window.open('menu_formacion.html');            
