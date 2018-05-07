@@ -1,4 +1,7 @@
 window.onload = function() {
+	var obj = JSON.parse(localStorage.getItem("usuario"));
+	console.log(obj.nombres);
+	$("#btn_inscribirse").html(obj.nombres+"!   Inscribete.")
 
 	var isCordovaApp = !!window.cordova; console.log(isCordovaApp);
 	if(isCordovaApp){

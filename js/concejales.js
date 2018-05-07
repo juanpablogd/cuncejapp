@@ -44,9 +44,9 @@ $(function () {
 				var html_telefono='';
 				if (value.telefono != null && value.telefono !== undefined) {
 					if (value.telefono2 != null && value.telefono2 !== undefined) {
-						html_telefono='<h5><span class="glyphicon glyphicon-earphone text-muted " style="margin-left: 12px;"> <a href="tel:'+indicativo(value.telefono)+'">'+value.telefono+'</a> - <a href="tel:'+indicativo(value.telefono2)+'">'+value.telefono2+'</a> </span></h5>';
+						html_telefono='<h5><span class="glyphicon glyphicon-earphone text-muted " style="margin-left: 12px;"> <a href="tel:'+indicativo(value.telefono)+'">'+value.telefono+'</a> - <a href="tel:'+indicativo(value.telefono2)+'">'+value.telefono2+'</a></span></h5>';
 					}else{
-						html_telefono='<h5><span class="glyphicon glyphicon-earphone text-muted" style="margin-left: 12px;"> <a href="tel:'+indicativo(value.telefono)+'">'+value.telefono+'</a> </span></h5>';
+						html_telefono='<h5><span class="glyphicon glyphicon-earphone text-muted" style="margin-left: 12px;"> <a href="tel:'+indicativo(value.telefono)+'">'+value.telefono+'</a> </span>&nbsp;<a href="whatsapp://send?text=Amigo concejal&phone=+57'+value.telefono+'&abid=+57'+value.telefono+'"><img border="0" alt="W3Schools" src="resources/sms_64x64.png" width="16" height="16"></a></h5>';
 					}	
 				}else{
 					html_telefono='<h5><span class="glyphicon glyphicon-earphone text-muted" style="margin-left: 12px;"> No registra </span></h5>';
