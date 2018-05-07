@@ -68,7 +68,7 @@ function cargaCursos(){
 $("#AbrirSitio").click(function(){
     var isCordovaApp = !!window.cordova; console.log(isCordovaApp);
     if(isCordovaApp){
-        var ref = cordova.InAppBrowser.open('http://colegiovirtualmoderno.edu.co/ava/login/index.php', '_system', 'location=no');
+        var ref = cordova.InAppBrowser.open('http://colegiovirtualmoderno.edu.co/ava/login/index.php', '_self', 'location=yes');
     }else{
         window.open('http://colegiovirtualmoderno.edu.co/ava/login/index.php');
     }
