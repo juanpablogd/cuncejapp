@@ -97,17 +97,27 @@
                 .container{
                     margin-top: 0px;
                 }
+                #myIframe {
+                    height: 570px;
+                }
             }
             @media only screen and (min-height:571px) and (max-height: 1000px) {
                 .img-responsive{
                     max-width: 96%;
+                }
+                #myIframe {
+                    height: 1000px;
                 }
             }
             @media only screen and (min-height:1001px) and (max-height: 2048px) {
                 .img-responsive{
                     max-width: 68%;
                 }
+                #myIframe {
+                    height: 2048px;
+                }
             }
+            body {overflow-y:hidden!important;}
 
         </style>
 
