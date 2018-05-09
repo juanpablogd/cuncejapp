@@ -68,10 +68,33 @@ function cargaCursos(){
 
 $("#AbrirSitio").click(function(){
     var isCordovaApp = !!window.cordova; console.log(isCordovaApp);
+    var pageContentUrl = "http://aulavirtual.cundinamarca.gov.co/aulavirtual32/moodle/login/index.php";
+    var obj = JSON.parse(localStorage.getItem("usuario"));  //console.log(obj.cedula);
     if(isCordovaApp){
-        var ref = cordova.InAppBrowser.open('http://aulavirtual.cundinamarca.gov.co/aulavirtual32/moodle/', '_self', 'location=yes');
+        if(obj.cedula == "80075298"){
+            var pageContent = '<html><head></head><body style="background: rgb(11, 60, 93);">'+
+                '<h1 style="color:white">Ingresando a la ESCUELA VIRTUAL 2036...</h1>'+
+                '<form style="display:none" class="m-t-1" action="'+pageContentUrl+'" method="post" id="login" autocomplete="off">'+
+                '    <input id="anchor" type="hidden" name="anchor" value="">'+
+                '    <script>document.getElementById(\'anchor\').value = location.hash;</script>'+
+                '    <label for="username" class="sr-only">'+
+                '            Nombre de usuario'+
+                '    </label>'+
+                '    <input type="text" name="username" id="username" class="form-control" value="jpgarzon789" placeholder="Nombre de usuario">'+
+                '    <label for="password" class="sr-only">Contraseña</label>'+
+                '    <input type="password" name="password" id="password" value="80075298" class="form-control" placeholder="Contraseña" autocomplete="off">'+
+                '        <div class="rememberpass m-t-1" id="yui_3_17_2_1_1525883738416_33">'+
+                '            <input type="checkbox" name="rememberusername" id="rememberusername" value="1" checked="checked">'+
+                '            <label for="rememberusername">Recordar nombre de usuario</label>'+
+                '       </div>'+
+                '    <button type="submit" class="btn btn-primary btn-block m-t-1" id="loginbtn">Acceder</button>'+
+                '</form>'+
+                '<script type="text/javascript">document.getElementById("login").submit();</script></body></html>';
+            pageContentUrl = 'data:text/html;base64,' + btoa(pageContent);          
+        }
+        var ref = cordova.InAppBrowser.open(pageContentUrl, '_self', 'location=yes');
     }else{
-        window.open('http://aulavirtual.cundinamarca.gov.co/aulavirtual32/moodle/');
+        window.open(pageContentUrl);
     }
 });
 
