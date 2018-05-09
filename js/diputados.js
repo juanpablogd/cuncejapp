@@ -136,7 +136,7 @@ $(function () {
 				}
 				$(".lista").append(
 			    '<div class="row">'+
-		        '<div class="[ col-xs-12 col-sm-offset-1 col-sm-12 ]">'+
+		        '<div class="[ col-xs-12 col-sm-12 col-md-12 col-lg-12 ]">'+
 		            '<div class="[ panel panel-default ] panel-google-plus">'+
 		                '<div class="panel-heading">'+
 		                    '<div class="avatar"><img class="[ img-circle pull-left ]" src="'+urlget+'/fotos/diputados/'+value.id+'.jpg" alt="Mouse0270" height="90"  /></div>'+

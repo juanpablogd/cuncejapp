@@ -62,7 +62,7 @@ $(function () {
 				
 				$(".lista").append(
 				    '<div class="row">'+
-			        '<div class="[ col-sm-12 col-sm-offset-1 col-sm-12 ]">'+
+			        '<div class="[ col-xs-12 col-sm-12 col-md-12 col-lg-12 ]">'+
 			            '<div class="[ panel panel-default ] panel-google-plus">'+
 			                '<div class="panel-heading">'+
 			                    html_nombre+
