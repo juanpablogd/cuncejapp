@@ -44,7 +44,7 @@ function msjDialog(msj){
 }
 window.onload = function() {
 	var obj = JSON.parse(localStorage.getItem("usuario"));	//console.log(obj);
-	$("#btn_inscribirse").html(obj.nombres+"!   Inscribete.")
+	$("#btn_inscribirse").html(obj.nombres+"!   preinscribete.")
 
 	var isCordovaApp = !!window.cordova; console.log(isCordovaApp);
 	if(isCordovaApp){
@@ -89,7 +89,7 @@ window.onload = function() {
 			$("#cargando").hide();
 			$('#btn_inscribirse').show();
 		  	if($.isNumeric(result)){
-				msjDialog("Honorable Concejal "+nombres+" "+apellidos+". su preinscripción ha sido exitosa, nos comunicaremos en las siguientes 24 horas para brindar asistencia y orientación para el proceso de matrícula.");
+				msjDialog("Honorable Concejal(a) "+nombres+" "+apellidos+". su preinscripción ha sido exitosa, nos comunicaremos en las siguientes 24 horas para brindar asistencia y orientación para el proceso de matrícula.");
 /*				  		alerta("Señor Concejal su preinscripción ha sido exitosa, nos comunicaremos en las siguientes 24 horas para brindar asistencia y orientación para el proceso de matrícula.",function() {
                     var isCordovaApp = !!window.cordova; console.log(isCordovaApp);
                     if(isCordovaApp){
