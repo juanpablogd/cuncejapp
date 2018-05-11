@@ -71,7 +71,7 @@ $("#AbrirSitio").click(function(){
     var pageContentUrl = "http://aulavirtual.cundinamarca.gov.co/aulavirtual32/moodle/login/index.php";
     var obj = JSON.parse(localStorage.getItem("usuario"));  //console.log(obj.cedula);
     if(isCordovaApp){
-        if(obj.cedula == "80075298"){
+        if(obj.ev2036_usr != "" && obj.ev2036_pas != ""){
             var pageContent = '<html><head></head><body style="background: rgb(11, 60, 93);">'+
                 '<h1 style="color:white">Ingresando a la ESCUELA VIRTUAL 2036...</h1>'+
                 '<form style="display:none" class="m-t-1" action="'+pageContentUrl+'" method="post" id="login" autocomplete="off">'+
@@ -80,9 +80,9 @@ $("#AbrirSitio").click(function(){
                 '    <label for="username" class="sr-only">'+
                 '            Nombre de usuario'+
                 '    </label>'+
-                '    <input type="text" name="username" id="username" class="form-control" value="jpgarzon789" placeholder="Nombre de usuario">'+
+                '    <input type="text" name="username" id="username" class="form-control" value="'+obj.ev2036_usr+'" placeholder="Nombre de usuario">'+
                 '    <label for="password" class="sr-only">Contraseña</label>'+
-                '    <input type="password" name="password" id="password" value="80075298" class="form-control" placeholder="Contraseña" autocomplete="off">'+
+                '    <input type="password" name="password" id="password" value="'+obj.ev2036_pas+'" class="form-control" placeholder="Contraseña" autocomplete="off">'+
                 '        <div class="rememberpass m-t-1" id="yui_3_17_2_1_1525883738416_33">'+
                 '            <input type="checkbox" name="rememberusername" id="rememberusername" value="1" checked="checked">'+
                 '            <label for="rememberusername">Recordar nombre de usuario</label>'+

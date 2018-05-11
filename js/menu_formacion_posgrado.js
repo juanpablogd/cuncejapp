@@ -68,9 +68,9 @@ function cargaCursos(){
 $("#AbrirSitio").click(function(){
     var isCordovaApp = !!window.cordova; console.log(isCordovaApp);
     if(isCordovaApp){
-        var ref = cordova.InAppBrowser.open('http://colegiovirtualmoderno.edu.co/ava/login/index.php', '_system', 'location=no');
+        var ref = cordova.InAppBrowser.open('http://www.esap.edu.co/portal/index.php/concursos-y-convocatorias-2/inscripciones/', '_system', 'location=no');
     }else{
-        window.open('http://colegiovirtualmoderno.edu.co/ava/login/index.php');
+        window.open('http://www.esap.edu.co/portal/index.php/concursos-y-convocatorias-2/inscripciones/');
     }
 });
 

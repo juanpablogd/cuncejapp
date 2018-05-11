@@ -41,7 +41,7 @@ $(function () {
 			else $(".lista").append('<center><h6 class="text-muted c-info"> '+longitud+' resultados .<h6><center>');
 				
 			var obj = JSON.parse(localStorage.getItem("usuario"));	console.log(obj);
-			var txtWhatsapp = "Amigo concejal, te habla "+obj.nombres+" "+obj.apellidos+", concejal del municipio "+obj.municipio;
+			var txtWhatsapp = "Amigo concejal, te habla "+obj.nombres+" "+obj.apellidos+" de "+obj.municipio;
 
 			$.each(data, function( index, value ) {
 				var html_telefono='';
