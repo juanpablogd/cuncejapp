@@ -21,11 +21,11 @@ function cargaCursos(){
         var registros = Object.keys(arr).length;    console.log(registros);
         $( ".lista" ).html('<br>');
         for (var i = 1; i < (registros+1); i++){
-            var htmlItem = '';  console.log(arr[i]);
+            var htmlItem = '';  //console.log(arr[i]);
             var htmlInscribirse = '';
             var fInicio = moment(arr[i].fecha_inicio+" 23:59:59", 'YYYY-MM-DD HH:mm:ss').toDate();
             var fLimite = moment(arr[i].fecha_inscripcion+" 23:59:59", 'YYYY-MM-DD HH:mm:ss').toDate();
-            var fActual = moment(); console.log(fLimite);   //console.log(fActual);
+            var fActual = moment(); //console.log(fLimite);   //console.log(fActual);
             var enCLick = "";
             if(fActual >= fLimite || fActual >= fInicio){
                 htmlInscribirse = '<div class="col-xs-12" style="color: red;">Cerrado!! Inscritos: '+arr[i].inscritos+'</div><br>';
@@ -69,8 +69,11 @@ function cargaCursos(){
 $("#AbrirSitio").click(function(){
     var isCordovaApp = !!window.cordova; console.log(isCordovaApp);
     var pageContentUrl = "http://aulavirtual.cundinamarca.gov.co/aulavirtual32/moodle/login/index.php";
-    var obj = JSON.parse(localStorage.getItem("usuario"));  //console.log(obj.cedula);
+    var obj = JSON.parse(localStorage.getItem("usuario"));  console.log(obj);
     if(isCordovaApp){
+        if(!obj.hasOwnProperty("ev2036_pas")){
+            localStorage.clear();var isCordovaApp = !!window.cordova; console.log(isCordovaApp);if(isCordovaApp){window.open('login.html');}else{window.open('login.html','_self');};return false;
+        }
         if(obj.ev2036_usr != "" && obj.ev2036_pas != ""){
             var pageContent = '<html><head></head><body style="background: rgb(11, 60, 93);">'+
                 '<h1 style="color:white">Ingresando a la ESCUELA VIRTUAL 2036...</h1>'+

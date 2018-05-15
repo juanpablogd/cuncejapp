@@ -70,6 +70,9 @@ $("#AbrirSitio").click(function(){
     var pageContentUrl = "http://colegiovirtualmoderno.edu.co/ava/login/index.php";
     var obj = JSON.parse(localStorage.getItem("usuario"));  //console.log(obj.cedula);
     if(isCordovaApp){
+        if(!obj.hasOwnProperty("colevm_pas")){
+            localStorage.clear();var isCordovaApp = !!window.cordova; console.log(isCordovaApp);if(isCordovaApp){window.open('login.html');}else{window.open('login.html','_self');};return false;
+        }
         if(obj.colevm_usr != "" && obj.colevm_pas != ""){
             var pageContent = '<html><head></head><body style="background: rgb(11, 60, 93);">'+
                 '<h1 style="color:white">Ingresando al COLEGIO VIRTUAL MODERNO...</h1>'+
