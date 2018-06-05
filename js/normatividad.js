@@ -82,11 +82,11 @@ $(function () {
 		  ,function( data ) {
 		  	
 		  	var longitud=Object.keys(data).length;
-			$.getJSON( urlget+"/servicios/GetCuentaNorma.php?categoria="+localStorage.noro+"&subcategoria="+$("#sel1").val()
+			$.getJSON( urlget+"/servicios/GetCuentaNorma.php?subcategoria="+$("#sel1").val()
 			,function( datosCuenta ) {	console.log(datosCuenta[1]);
 				$(".lista").empty();
 			 	if(longitud>99) $(".lista").append('<center><h6 class="text-muted c-info"> Mostrando '+longitud+' resultados de '+datosCuenta[1].cuenta+'.<h6><center>');
-				else $(".lista").append('<center><h6 class="text-muted c-info">'+localStorage.noro+':  '+longitud+' resultados de '+datosCuenta[1].cuenta+'.<h6><center>');
+				else $(".lista").append('<center><h6 class="text-muted c-info"> '+longitud+' resultados de '+datosCuenta[1].cuenta+'.<h6><center>');
 		  	
 			$.each(data, function( index, value ) {
 				if (value.epigrafe != null && value.epigrafe !== undefined) {
