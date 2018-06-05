@@ -66,7 +66,7 @@ $(function () {
 	    timer = setTimeout(callback, ms);
 	  };
 	})();
-	$.getJSON( urlget+"/servicios/GetTipoNorma.php?categoria="+localStorage.noro , function( data ) {
+	$.getJSON( urlget+"/servicios/GetTipoNorma.php?", function( data ) {
 				$.each(data, function( index, value ) {
 					$("#sel1").append(
 					'<option value="'+value.subcategoria+'" >'+value.subcategoria+'</option>'
@@ -78,7 +78,6 @@ $(function () {
 		$.getJSON(urlget+"/servicios/GetNormatividad.php", 
 		  {cl: datoInput,
 		  	subcategoria:$("#sel1").val(),
-		  	categoria: localStorage.noro
 		  }
 		  ,function( data ) {
 		  	
