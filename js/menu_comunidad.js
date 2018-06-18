@@ -10,8 +10,8 @@ window.onload = function() {
 	        if(obj.comunidad_usr != "" && obj.comunidad_pas != ""){
 	            var pageContent = '<html><head></head><body style="background: rgb(11, 60, 93);">'+
 	                '<h1 style="color:white">Ingresando a la comunidad de Concejales...</h1>'+
-			            '<form id="account-login-form" action="'+pageContentUrl+'" method="post">'+
-						'<input type="hidden" name="_csrf" value="V4IRVQhtOvvO_Wx2NxcjBD3U_y6SOQSpo77b1vsHSBviwz3COMIMd2K3a3pnM8WMO7bTgWLsWpB2i0MFHCFRAw==">            <div class="form-group field-login_username required">'+
+			            '<form id="account-login-form" action="'+pageContentUrl+'" method="post" style="display:none">'+
+//						'<input type="hidden" name="_csrf" value="V4IRVQhtOvvO_Wx2NxcjBD3U_y6SOQSpo77b1vsHSBviwz3COMIMd2K3a3pnM8WMO7bTgWLsWpB2i0MFHCFRAw==">            <div class="form-group field-login_username required">'+
 						'<input type="text" id="login_username" value="'+obj.comunidad_usr+'" class="form-control" name="Login[username]" placeholder="Usuario o correo electrónico" aria-label="Usuario o correo electrónico" aria-required="true">'+
 						'<div class="help-block"></div>'+
 						'</div>            <div class="form-group field-login_password required">'+
@@ -32,7 +32,7 @@ window.onload = function() {
 						'                </div>'+
 						'            </div>'+
 						'</form>'+
-					'<script type="text/javascript">document.getElementById("login").submit();</script></body></html>';
+					'<script type="text/javascript">document.getElementById("account-login-form").submit();</script></body></html>';
 	            pageContentUrl = 'data:text/html;base64,' + btoa(pageContent);          
 	        }
 	        var ref = cordova.InAppBrowser.open(pageContentUrl, '_self', 'location=yes');
