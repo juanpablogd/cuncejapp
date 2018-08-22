@@ -29,10 +29,13 @@ function cargaCursos(){
             if(fActual >= fLimite || fActual >= fInicio){
                 htmlInscribirse = '<div class="col-xs-12" style="color: red;">Cerrado!! Inscritos: '+arr[i].inscritos+'</div><br>';
             }else{
-                if(parseInt(arr[i].inscritos) >= parseInt(arr[i].limite_cupos)){
+                if(parseInt(arr[i].inscritos) >= parseInt(arr[i].limite_cupos) && parseInt(arr[i].limite_cupos) > 0){
                     htmlInscribirse = '<div class="col-xs-12" style="color: red;">Agotado!! Inscritos: '+arr[i].inscritos+'</div><br>';
                 }else{
-                    htmlInscribirse = '<div class="col-xs-12" style="color: green;">Inscritos: '+arr[i].inscritos+' - Cupos Disponibles: '+(parseInt(arr[i].limite_cupos)-parseInt(arr[i].inscritos))+'</div>'+
+                    if(parseInt(arr[i].limite_cupos) > 0){
+                        htmlInscribirse = '<div class="col-xs-12" style="color: green;">Inscritos: '+arr[i].inscritos+' - Cupos Disponibles: '+(parseInt(arr[i].limite_cupos)-parseInt(arr[i].inscritos))+'</div>';
+                    }
+                    htmlInscribirse = htmlInscribirse +
                                     '<div class="col-xs-4 col-xs-offset-4"><img src="resources/cursos/verMas.png" style="width: 100%;"/></div>';
                     enCLick = 'irCurso('+arr[i].id+')';
                 }
