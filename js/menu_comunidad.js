@@ -40,4 +40,16 @@ window.onload = function() {
 	        window.open(pageContentUrl);
 	    }
 	});
+
+	$("#abrirConvocatoria").click(function(){
+	    localStorage.setItem("tmp_curso", 43);	console.log(43);
+	    var isCordovaApp = !!window.cordova; console.log(isCordovaApp);
+	    if(isCordovaApp){
+	        setTimeout(function(){ window.open('menu_formacion_detalle.html'); }, 50);          
+	    }else{
+	        window.open('menu_formacion_detalle.html','_self');
+	        setTimeout(function(){ window.open('menu_formacion_detalle.html','_self'); }, 50);
+	    }
+	});
+
 };

@@ -4,7 +4,7 @@
     <head>
         <meta charset="utf-8">
 
-        <title>Cuncejapp</title>
+        <title>OneUI - Admin Dashboard Template &amp; UI Framework</title>
 
         <meta name="description" content="OneUI - Admin Dashboard Template &amp; UI Framework created by pixelcave and published on Themeforest">
         <meta name="author" content="pixelcave">
@@ -81,7 +81,7 @@
             }
             .row
             {
-                height: 15%;
+                height: 20%;
                 display: table-row;
             }
             .colorgraphRojo{
@@ -92,27 +92,32 @@
             }
             @media only screen and (min-height:1px) and (max-height: 570px) {
                 .img-responsive{
-                    max-width: 68%;
+                    max-width: 75%;
                 }
                 .container{
                     margin-top: 0px;
                 }
-            }
-            @media only screen and (min-height:571px) and (max-height: 650px) {
-                .img-responsive{
-                    max-width: 79%;
+                #myIframe {
+                    height: 570px;
                 }
             }
-            @media only screen and (min-height:651px) and (max-height: 1000px) {
+            @media only screen and (min-height:571px) and (max-height: 1000px) {
                 .img-responsive{
-                    max-width: 80%;
+                    max-width: 96%;
+                }
+                #myIframe {
+                    height: 1000px;
                 }
             }
             @media only screen and (min-height:1001px) and (max-height: 2048px) {
                 .img-responsive{
                     max-width: 68%;
                 }
+                #myIframe {
+                    height: 2048px;
+                }
             }
+            body {overflow-y:hidden!important;}
 
         </style>
 
@@ -187,103 +192,29 @@
                         </div>
                     </li>
                 </ul>                
-                <a href="menu_principal.html" class="btn btn-info" role="button" style="float: right;"><i class="fa fa-home" aria-hidden="true"></i></a>
+                <a href="menu_banco_normativo.html" class="btn btn-info" role="button" style="float: right;"><i class="fa fa-history" aria-hidden="true"></i></a>
             </header>
             <!-- END Header -->
-            
+
             <!-- Main Container -->
-            <main id="main-container" class="degradeFondo" >
+            <main id="main-container" class="degradeFondo">
                 <hr class="colorgraphRojo">
-                <div class="container" >
-                    <div class="row">
-                            <div class="col-md-1 col-xs-1">&nbsp;</div>
-                            <div class="col-md-5 col-xs-5">
-                                <div class="center-block">
-                                    <a id="menu_formacion_formal" href="menu_formacion_formal.html"><img class="img-responsive center-block" alt="Responsive image" src="resources/formacionFormal.png" ></a>
-                                    <label style="color:white;font-weight: 400">Haga su Bachillerato</label>
-                                </div>
-                            </div>
-                            <div class="col-md-5 col-xs-5">
-                                <div class="center-block">
-                                    <a id ="menu_formacion_cursos" href ="menu_formacion_cursos.html" ><img class="img-responsive center-block" alt="Responsive image" src="resources/escuelaVirtual.png" >
-                                    </a>
-                                    <label style="color:white;font-weight: 400">Escuela virtual Cundinamarca 2036</label>
-                                </div>
-                            </div>
-                            <div class="col-md-1 col-xs-1">&nbsp;</div>
-                    </div>
-                    <div class="row">
-                            <div class="col-md-1 col-xs-1">&nbsp;</div>
-                            <div class="col-md-5 col-xs-5">
-                                <div class="center-block">
-                                    <a id="menu_formacion_pregrado" href="menu_formacion_pregrado.html"><img class="img-responsive center-block" alt="Responsive image" src="resources/pregradoESAP.png" ></a>
-                                    <label style="color:white;font-weight: 400">Pregrado ESAP</label>
-                                </div>
-                            </div>
-                            <div class="col-md-5 col-xs-5">
-                                <div class="center-block">
-                                    <a id ="menu_formacion_posgrado" href ="menu_formacion_posgrado.html" ><img class="img-responsive center-block" alt="Responsive image" src="resources/posgradoESAP.png" >
-                                    </a>
-                                    <label style="color:white;font-weight: 400">Postgrado ESAP</label>
-                                </div>
-                            </div>
-                            <div class="col-md-1 col-xs-1">&nbsp;</div>
-                    </div>
-                    <div class="row">
-                            <div class="col-md-1 col-xs-1">&nbsp;</div>
-                            <div class="col-md-5 col-xs-5">
-                                <div class="center-block">
-                                    <a id="menu_formacion_rosario" href="menu_formacion_rosario.html"><img class="img-responsive center-block" alt="Responsive image" src="resources/rosario.png" ></a>
-                                    <label style="color:white;font-weight: 400">Diplomado Internacional</label>
-                                </div>
-                            </div>
-                            <div class="col-md-5 col-xs-5">
-                                <div class="center-block">
-                                    <div class="center-block">
-                                        <a id="menu_formacion_autonoma" href="menu_formacion_autonoma.html"><img class="img-responsive center-block" alt="Responsive image" src="resources/autonoma.png" ></a>
-                                        <label style="color:white;font-weight: 400">U. Autonoma</label>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-md-1 col-xs-1">&nbsp;</div>
-                    </div>
-                    <div class="row">
-                            <div class="col-md-1 col-xs-1">&nbsp;</div>
-                            <div class="col-md-5 col-xs-5">
-                                <div class="center-block">
-                                    <a id="menu_formacion_andes" href="menu_formacion_andes.html"><img class="img-responsive center-block" alt="Responsive image" src="resources/andes.png" ></a>
-                                    <label style="color:white;font-weight: 400">U. Andes</label>
-                                </div>
-                            </div>
-                            <div class="col-md-5 col-xs-5">
-                                <!--div class="center-block">
-                                    <div class="center-block">
-                                        <a id="menu_formacion_autonoma" href="menu_formacion_autonoma.html"><img class="img-responsive center-block" alt="Responsive image" src="resources/autonoma.png" ></a>
-                                        <label style="color:white;font-weight: 400">U. autonoma</label>
-                                    </div>
-                                </div -->
-                            </div>
-                            <div class="col-md-1 col-xs-1">&nbsp;</div>
-                    </div>
-                </div>
-                <!-- END Page Content -->
+                <iframe id="myIframe" style="width: 100%;height: 1246px" src="" frameborder="0" allowfullscreen></iframe>
             </main>
             <!-- END Main Container -->
+            <!-- END Footer -->
         </div>
         <!-- END Page Container -->
-        <!-- div class="footer" style="bottom: -12px;max-height: 160px;">
-          <p style="text-align:center"><img src="resources/imgPie.png" style="width:100%;"></p>
-        </div -->
+
         <!-- OneUI Core JS: jQuery, Bootstrap, slimScroll, scrollLock, Appear, CountTo, Placeholder, Cookie and App.js -->
         <script src="assets/js/core/jquery.slimscroll.min.js"></script>
         <script src="assets/js/core/jquery.scrollLock.min.js"></script>
         <script src="assets/js/core/jquery.appear.min.js"></script>
         <script src="assets/js/core/jquery.countTo.min.js"></script>
         <script src="assets/js/core/jquery.placeholder.min.js"></script>
-        <script src="libs/moment/moment-with-locales.min.js"></script>
         <script src="assets/js/core/js.cookie.min.js"></script>
-        <script src="js/menu_principal.js"></script>
         <script src="assets/js/app.js"></script>
-
+        <script src="js/valogin.js"></script>
+        <script src="js/menu_gestion_riesgo.js"></script>
     </body>
 </html>
