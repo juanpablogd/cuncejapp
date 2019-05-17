@@ -2,9 +2,7 @@ function irTip(id){
     localStorage.setItem("tmp_tip", id);
     console.log(id);
     setTimeout(function(){
-        window.open(
-          'menu_tip_detalle.html'
-        ); 
+        window.open('menu_tip_detalle.html','_self');
     }, 50);
 }
 
