@@ -1,4 +1,5 @@
 var urlget='http://saga.cundinamarca.gov.co/apps/cuncejapp';
+var urlFotos='http://saga.cundinamarca.gov.co/SIG/data/doc/cuncejapp';
 
 function indicativo(num){
 	if(num.length<10){
@@ -44,7 +45,7 @@ function modalData(id){
 							            	
 										'</div>'+
 							            '<div class="avatar">'+
-							                '<img alt="" src="'+urlget+'/fotos/diputados/'+id+'.jpg">'+
+							                '<img alt="" src="'+urlFotos+'/fotos/diputados/'+id+'.jpg">'+
 							            '</div>'+
 							            '<div class="info">'+
 							                '<div class="title">'+
@@ -139,7 +140,7 @@ $(function () {
 		        '<div class="[ col-xs-12 col-sm-12 col-md-12 col-lg-12 ]">'+
 		            '<div class="[ panel panel-default ] panel-google-plus">'+
 		                '<div class="panel-heading">'+
-		                    '<div class="avatar"><img class="[ img-circle pull-left ]" src="'+urlget+'/fotos/diputados/'+value.id+'.jpg" alt="Mouse0270" height="90"  /></div>'+
+		                    '<div class="avatar"><img class="[ img-circle pull-left ]" src="'+urlFotos+'/fotos/diputados/'+value.id+'.jpg" alt="Mouse0270" height="90"  /></div>'+
 		                    '<h3>'+value.nombre+'</h3>'+
 		                    '<h5><span class="glyphicon glyphicon-bookmark text-muted c-info"></span><span> '+value.cargo+'</span> </h5>'+
 		                    '<h5><span class="glyphicon glyphicon-pushpin text-muted c-info"></span><span> '+value.partido+'</span> </h5>'+

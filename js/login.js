@@ -46,22 +46,38 @@ $(function () {
         }
         console.log("Ok");
 
-        $.getJSON(urlget+"/servicios/getUsuario.php?usr="+usr+"&pwd="+pwd, function( data ) {
-        		console.log(data);
-        		if(data == null){
-        			mensaje("Usuario o Clave invalida!");
-        		}else{
-        			localStorage.setItem("usuario", JSON.stringify(data[1]));
-			  		setTimeout(function(){
+
+        $.ajax({
+            url: urlget+"/servicios/getUsuario.php",
+            data: { "usr": usr, "usr": usr },
+            cache: false,
+            type: 'GET',
+            success: function (data) {  console.log(data);
+                if(data == null){
+                    mensaje("Usuario o Clave invalida!");
+                }else{
+                    localStorage.setItem("usuario", JSON.stringify(data[1]));
+                    setTimeout(function(){
                         var isCordovaApp = !!window.cordova; console.log(isCordovaApp);
                         if(isCordovaApp){
                             window.open('menu_principal.html');            
                         }else{
                             window.open('menu_principal.html','_self');
                         }
-					}, 50);
-        		}
+                    }, 50);
+                }
+            }
         });
+
+        cordova.plugin.http.get(urlget+"/servicios/getUsuario.php",
+            { "usr": usr, "usr": usr },
+        function(response) {    console.log(response);
+            console.log(response.status);
+        }, function(response) {
+          console.error(response.error);
+        });
+
+
     });
 
 });

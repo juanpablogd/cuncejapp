@@ -67,9 +67,9 @@ var app = {
         console.log(devicePlatform);
         if(devicePlatform == "iOS"){
         	StatusBar.overlaysWebView(false);
-            FCMPlugin.subscribeToTopic('ios');
+            //FCMPlugin.subscribeToTopic('ios');
         }else{
-            FCMPlugin.subscribeToTopic('android');
+            //FCMPlugin.subscribeToTopic('android');
         }
 	    var networkState = navigator.connection.type;	console.log('Connection type: ' + networkState);
 	    if (networkState == Connection.NONE || networkState == Connection.UNKNOWN) {   console.log("Sin Conectividad");
@@ -92,8 +92,7 @@ var app = {
 				);
 		}
         
-
-        FCMPlugin.onTokenRefresh(function(token){
+/*        FCMPlugin.onTokenRefresh(function(token){
             console.log( token );
         });
 
@@ -126,7 +125,7 @@ var app = {
             console.log("successCallback:", msg);
         },function(err) {
             console.log("Error errorCallback:", err);
-        });
+        }); */
 
 
         var badge = Number($("#nactual").text()); console.log(badge);
