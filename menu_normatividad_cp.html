@@ -4,7 +4,7 @@
     <head>
         <meta charset="utf-8">
 
-        <title>Cuncejapp</title>
+        <title>OneUI - Admin Dashboard Template &amp; UI Framework</title>
 
         <meta name="description" content="OneUI - Admin Dashboard Template &amp; UI Framework created by pixelcave and published on Themeforest">
         <meta name="author" content="pixelcave">
@@ -34,11 +34,8 @@
         <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400italic,600,700%7COpen+Sans:300,400,400italic,600,700">
 
         <!-- Bootstrap and OneUI CSS framework -->
-
         <link rel="stylesheet" href="assets/css/bootstrap.min.css">
-        <link rel="stylesheet" href="./libs/dialog/css/bootstrap-dialog.min.css" >
         <link rel="stylesheet" id="css-main" href="assets/css/oneui.css">
-
         
         <link rel="stylesheet" href="libs/notify/animate.css">
         <style type="text/css">
@@ -68,7 +65,7 @@
             {
                 display:table;
                 width: 100%;
-                margin-top: -20px;
+                margin-top: -25px;
                 padding: 5px 0 0 0; /*set left/right padding according to needs*/
                 -moz-box-sizing: border-box;
                 box-sizing: border-box;
@@ -100,33 +97,28 @@
                 .container{
                     margin-top: 0px;
                 }
+                #myIframe {
+                    height: 570px;
+                }
             }
             @media only screen and (min-height:571px) and (max-height: 1000px) {
                 .img-responsive{
                     max-width: 96%;
+                }
+                #myIframe {
+                    height: 1000px;
                 }
             }
             @media only screen and (min-height:1001px) and (max-height: 2048px) {
                 .img-responsive{
                     max-width: 68%;
                 }
+                #myIframe {
+                    height: 2048px;
+                }
             }
-            .panel-body {
-                padding: 0px !important;
-            }
-            .panel-google-plus {
-                border-radius: 2px;
-                border: 1px solid #0a648c;
-            }
-            .panel-google-plus > .panel-heading {
-                border-radius: 2px;
-            }
-            .content {
-                padding: 0px;
-            }
-            .text-muted {
-                color: white;
-            }
+            body {overflow-y:hidden!important;}
+
         </style>
 
         <script src="assets/js/core/jquery.min.js"></script>
@@ -134,6 +126,7 @@
         <script src="libs/notify/bootstrap-notify.min.js"></script>     
         <script type="text/javascript" src="cordova.js"></script>
         <script type="text/javascript" src="js/ini_cordova.js"></script>
+        <!-- END Stylesheets -->
     </head>
     <body>
         <!-- Page Container -->
@@ -202,142 +195,18 @@
                 <a href="menu_banco_normativo.html" class="btn btn-info" role="button" style="float: right;"><i class="fa fa-history" aria-hidden="true"></i></a>
             </header>
             <!-- END Header -->
-            
+
             <!-- Main Container -->
-            <main id="main-container">
+            <main id="main-container" class="degradeFondo">
                 <hr class="colorgraphRojo">
-                <!-- Page Content -->
-                <div class="content" style="text-align: justify;">
-                    <div class="row">
-                        <video width="100%" height="360" src="resources/CNPC.mp4" type="video/mp4" 
-    id="player1" poster="resources/CNP.jpg" 
-    controls="controls" controlsList="nodownload" preload="auto">
-                        </video>
-                    </div>
-                </div>
-                <!-- CARRRUSEL -->
-                <div id="myCarousel" class="carousel slide" data-ride="carousel">
-                    <!-- Indicators -->
-                    <ol class="carousel-indicators">
-                      <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
-                      <li data-target="#myCarousel" data-slide-to="1"></li>
-                      <li data-target="#myCarousel" data-slide-to="2"></li>
-                      <li data-target="#myCarousel" data-slide-to="3"></li>
-                      <li data-target="#myCarousel" data-slide-to="4"></li>
-                      <li data-target="#myCarousel" data-slide-to="5"></li>
-                      <li data-target="#myCarousel" data-slide-to="6"></li>
-                      <li data-target="#myCarousel" data-slide-to="7"></li>
-                      <li data-target="#myCarousel" data-slide-to="8"></li>
-                      <li data-target="#myCarousel" data-slide-to="9"></li>
-                      <li data-target="#myCarousel" data-slide-to="10"></li>
-                      <li data-target="#myCarousel" data-slide-to="11"></li>
-                      <li data-target="#myCarousel" data-slide-to="12"></li>
-                      <li data-target="#myCarousel" data-slide-to="13"></li>
-                      <li data-target="#myCarousel" data-slide-to="14"></li>
-                      <li data-target="#myCarousel" data-slide-to="15"></li>
-                      <li data-target="#myCarousel" data-slide-to="16"></li>
-                      <li data-target="#myCarousel" data-slide-to="17"></li>
-                      <li data-target="#myCarousel" data-slide-to="18"></li>
-                      <li data-target="#myCarousel" data-slide-to="19"></li>
-                      <li data-target="#myCarousel" data-slide-to="20"></li>
-                      <li data-target="#myCarousel" data-slide-to="21"></li>
-                      <li data-target="#myCarousel" data-slide-to="22"></li>
-                    </ol>
-
-                    <!-- Wrapper for slides -->
-                    <div class="carousel-inner" style="height: -webkit-fill-available;">
-                      <div class="item active">
-                        <img src="resources/cod_policia/1.jpg" alt="Gestión Riesgo" style="width:100%;">
-                      </div>
-
-                      <div class="item">
-                        <img src="resources/cod_policia/2.jpg" alt="Gestión Riesgo" style="width:100%;">
-                      </div>
-                    
-                      <div class="item">
-                        <img src="resources/cod_policia/3.jpg" alt="Gestión Riesgo" style="width:100%;">
-                      </div>        
-                      <div class="item">
-                        <img src="resources/cod_policia/4.jpg" alt="Gestión Riesgo" style="width:100%;">
-                      </div>        
-                      <div class="item">
-                        <img src="resources/cod_policia/5.jpg" alt="Gestión Riesgo" style="width:100%;">
-                      </div>        
-                      <div class="item">
-                        <img src="resources/cod_policia/6.jpg" alt="Gestión Riesgo" style="width:100%;">
-                      </div>        
-                      <div class="item">
-                        <img src="resources/cod_policia/7.jpg" alt="Gestión Riesgo" style="width:100%;">
-                      </div>        
-                      <div class="item">
-                        <img src="resources/cod_policia/8.jpg" alt="Gestión Riesgo" style="width:100%;">
-                      </div>        
-                      <div class="item">
-                        <img src="resources/cod_policia/9.jpg" alt="Gestión Riesgo" style="width:100%;">
-                      </div>        
-                      <div class="item">
-                        <img src="resources/cod_policia/10.jpg" alt="Gestión Riesgo" style="width:100%;">
-                      </div>        
-                      <div class="item">
-                        <img src="resources/cod_policia/11.jpg" alt="Gestión Riesgo" style="width:100%;">
-                      </div>        
-                      <div class="item">
-                        <img src="resources/cod_policia/12.jpg" alt="Gestión Riesgo" style="width:100%;">
-                      </div>        
-                      <div class="item">
-                        <img src="resources/cod_policia/13.jpg" alt="Gestión Riesgo" style="width:100%;">
-                      </div>        
-                      <div class="item">
-                        <img src="resources/cod_policia/14.jpg" alt="Gestión Riesgo" style="width:100%;">
-                      </div>        
-                      <div class="item">
-                        <img src="resources/cod_policia/15.jpg" alt="Gestión Riesgo" style="width:100%;">
-                      </div>
-                      <div class="item">
-                        <img src="resources/cod_policia/16.jpg" alt="Gestión Riesgo" style="width:100%;">
-                      </div>        
-                      <div class="item">
-                        <img src="resources/cod_policia/17.jpg" alt="Gestión Riesgo" style="width:100%;">
-                      </div>        
-                      <div class="item">
-                        <img src="resources/cod_policia/18.jpg" alt="Gestión Riesgo" style="width:100%;">
-                      </div>        
-                      <div class="item">
-                        <img src="resources/cod_policia/19.jpg" alt="Gestión Riesgo" style="width:100%;">
-                      </div>        
-                      <div class="item">
-                        <img src="resources/cod_policia/20.jpg" alt="Gestión Riesgo" style="width:100%;">
-                      </div>        
-                      <div class="item">
-                        <img src="resources/cod_policia/21.jpg" alt="Gestión Riesgo" style="width:100%;">
-                      </div>        
-                      <div class="item">
-                        <img src="resources/cod_policia/22.jpg" alt="Gestión Riesgo" style="width:100%;">
-                      </div>
-                    </div>
-
-                    <!-- Left and right controls -->
-                    <a class="left carousel-control" href="#myCarousel" data-slide="prev">
-                      <span class="glyphicon glyphicon-chevron-left"></span>
-                      <span class="sr-only">Previous</span>
-                    </a>
-                    <a class="right carousel-control" href="#myCarousel" data-slide="next">
-                      <span class="glyphicon glyphicon-chevron-right"></span>
-                      <span class="sr-only">Next</span>
-                    </a>
-                </div>
-                <!-- END Page Content -->
+                <iframe id="myIframe" style="width: 100%;height: 1246px" src="" frameborder="0" allowfullscreen></iframe>
             </main>
             <!-- END Main Container -->
             <!-- END Footer -->
-
         </div>
         <!-- END Page Container -->
-        
 
         <!-- OneUI Core JS: jQuery, Bootstrap, slimScroll, scrollLock, Appear, CountTo, Placeholder, Cookie and App.js -->
-        <script src="assets/js/core/jquery.min.js"></script>
-        <script src="assets/js/core/bootstrap.min.js"></script>
         <script src="assets/js/core/jquery.slimscroll.min.js"></script>
         <script src="assets/js/core/jquery.scrollLock.min.js"></script>
         <script src="assets/js/core/jquery.appear.min.js"></script>
@@ -345,11 +214,7 @@
         <script src="assets/js/core/jquery.placeholder.min.js"></script>
         <script src="assets/js/core/js.cookie.min.js"></script>
         <script src="assets/js/app.js"></script>
-        <script type="text/javascript">
-            if(localStorage.getItem("usuario") == null){
-                $(".opciones").hide();
-            }
-        </script>
-
+        <script src="js/valogin.js"></script>
+        <script src="js/menu_normatividad_cp.js"></script>
     </body>
 </html>
